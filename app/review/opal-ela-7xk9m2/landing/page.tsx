@@ -11,52 +11,15 @@ const outcomes = [
   'Connect Gmail so your agent can help manage your inbox'
 ];
 
-const reportCards = [
-  {
-    id: '01',
-    title: 'Setup Blueprint',
-    body: 'A practical setup path so your assistant is useful on day one—not just “installed.”'
-  },
-  {
-    id: '02',
-    title: 'Memory Upgrade Plan',
-    body: 'Simple changes that make your agent keep context, follow preferences, and avoid repeating mistakes.'
-  },
-  {
-    id: '03',
-    title: 'Workflow + Inbox System',
-    body: 'A clean operating model for projects and email so your agent supports execution, not noise.'
-  }
-];
-
-const steps = [
-  {
-    title: 'Get the PDF instantly',
-    body: 'Purchase once and access the guide immediately.'
-  },
-  {
-    title: 'Apply the setup in under an hour',
-    body: 'Follow the checklist and copy-ready templates step by step.'
-  },
-  {
-    title: 'Run your assistant with confidence',
-    body: 'Use the operating rules to keep output consistent and reliable.'
-  }
-];
-
-const testimonials = [
-  {
-    quote:
-      'I finally stopped “playing with AI” and started using it to run real work. The setup was clear and immediately useful.',
-    name: 'Kate R.',
-    role: 'Chief of Staff'
-  },
-  {
-    quote:
-      'This gave me a clean system, not more theory. My assistant now tracks context and helps me move faster every week.',
-    name: 'Rob W.',
-    role: 'Head of Product Growth'
-  }
+const marqueeItems = [
+  { icon: '📧', text: 'Manage your inbox & draft replies to your team' },
+  { icon: '🛒', text: 'Run your grocery & to-do lists' },
+  { icon: '🌙', text: 'Finish your work while you sleep' },
+  { icon: '📱', text: 'Analyze social media and get your best content ideas' },
+  { icon: '🧠', text: 'Remember decisions, priorities, and blockers automatically' },
+  { icon: '📅', text: 'Plan your day with a clear morning brief' },
+  { icon: '🧾', text: 'Summarize meetings and turn them into action items' },
+  { icon: '🚨', text: 'Catch blockers early before they slow you down' }
 ];
 
 export const metadata = {
@@ -80,15 +43,72 @@ function LogoSelectedC() {
   );
 }
 
+function ScrollingCapabilities() {
+  const repeated = [...marqueeItems, ...marqueeItems];
+
+  return (
+    <div
+      style={{
+        overflow: 'hidden',
+        border: '1px solid #eadfd1',
+        borderRadius: 16,
+        background: '#fff',
+        boxShadow: '0 8px 20px rgba(77,46,34,0.03)'
+      }}
+    >
+      <div
+        style={{
+          display: 'flex',
+          gap: 12,
+          width: 'max-content',
+          padding: '12px 10px',
+          animation: 'scrollLeft 34s linear infinite'
+        }}
+      >
+        {repeated.map((item, idx) => (
+          <div
+            key={`${item.text}-${idx}`}
+            style={{
+              minWidth: 260,
+              maxWidth: 260,
+              border: '1px solid #f0e5d8',
+              background: '#fffaf3',
+              borderRadius: 12,
+              padding: '12px 12px 10px',
+              display: 'grid',
+              gap: 6
+            }}
+          >
+            <div style={{ fontSize: 22 }}>{item.icon}</div>
+            <p style={{ margin: 0, color: '#4f433c', fontSize: 14, lineHeight: 1.35 }}>{item.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function PrivateDraftLandingPage() {
   return (
     <main style={{ minHeight: '100vh', background: '#f4f0e8', color: '#2a211d', padding: '38px 20px 84px' }}>
+      <style>{`
+        @keyframes scrollLeft {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
+
       <div style={{ maxWidth: 980, margin: '0 auto' }}>
-        <header style={{ marginBottom: 28 }}>
-          <p style={{ margin: 0, letterSpacing: 1.4, textTransform: 'uppercase', fontSize: 12, color: '#8a786c' }}>Private Review Draft v6</p>
+        <header style={{ marginBottom: 24 }}>
+          <p style={{ margin: 0, letterSpacing: 1.4, textTransform: 'uppercase', fontSize: 12, color: '#8a786c' }}>Private Review Draft v7</p>
           <div style={{ marginTop: 10 }}>
             <LogoSelectedC />
           </div>
+          <p style={{ margin: '10px 0 0', color: '#6b5a4f', fontSize: 13, lineHeight: 1.45, maxWidth: 900 }}>
+            Give them a fish, feed them for a day. Teach them to fish, feed them for a lifetime.
+            <br />
+            Everything you need to learn to create your own AI agent, simplified and ELI5-ed. You’ll have the power to make yours fully customized to you — no more paying for expensive wrappers that don’t work.
+          </p>
         </header>
 
         <section
@@ -96,16 +116,19 @@ export default function PrivateDraftLandingPage() {
             background: '#fffaf3',
             border: '1px solid #e9dece',
             borderRadius: 22,
-            padding: '34px 26px',
+            padding: '28px 24px',
             boxShadow: '0 10px 30px rgba(77,46,34,0.05)'
           }}
         >
-          <h1 className={editorial.className} style={{ fontSize: 'clamp(34px, 5.8vw, 58px)', lineHeight: 1.08, margin: '0 0 14px', color: '#6b2e1e', fontWeight: 500, maxWidth: 900 }}>
-            Give them a fish, feed them for a day. Teach them to fish, feed them for a lifetime.
+          <h1 className={editorial.className} style={{ fontSize: 'clamp(28px, 3.7vw, 42px)', lineHeight: 1.15, margin: '0 0 12px', color: '#6b2e1e', fontWeight: 500, maxWidth: 920 }}>
+            We’ve done the hard part and listened to too many tech bros teach OpenClaw on YouTube. We’ve tried hundreds of options and simplified the best way you need to create your own AI agent assistant using only your computer.
           </h1>
-          <p style={{ fontSize: 20, maxWidth: 900, margin: 0, color: '#4e423b' }}>
-            Everything you need to learn to create your own AI agent, simplified and ELI5-ed. You’ll have the power to make yours fully customized to you — no more paying for expensive wrappers that don’t work.
+
+          <p className={editorial.className} style={{ margin: '12px 0 12px', fontSize: 33, color: '#6b2e1e', lineHeight: 1.05 }}>
+            here’s what you can do with your AI assistant
           </p>
+
+          <ScrollingCapabilities />
         </section>
 
         <section style={{ marginTop: 24 }}>
@@ -167,64 +190,6 @@ export default function PrivateDraftLandingPage() {
               </div>
             </div>
           </article>
-        </section>
-
-        <section style={{ marginTop: 24, display: 'grid', gap: 14 }}>
-          {reportCards.map((card) => (
-            <article
-              key={card.id}
-              style={{
-                background: '#fff',
-                border: '1px solid #eadfd1',
-                borderRadius: 18,
-                padding: 20,
-                boxShadow: '0 8px 24px rgba(77,46,34,0.035)'
-              }}
-            >
-              <p style={{ margin: 0, fontSize: 12, letterSpacing: 1.2, textTransform: 'uppercase', color: '#8a786c' }}>OpalAI · {card.id}</p>
-              <h3 className={editorial.className} style={{ margin: '8px 0 6px', fontSize: 34, lineHeight: 1.05, color: '#6b2e1e' }}>
-                {card.title}
-              </h3>
-              <p style={{ margin: 0, fontSize: 17, color: '#4e423b' }}>{card.body}</p>
-            </article>
-          ))}
-        </section>
-
-        <section style={{ marginTop: 24, background: '#fff', border: '1px solid #eadfd1', borderRadius: 18, padding: 22 }}>
-          <h3 className={editorial.className} style={{ margin: '0 0 10px', fontSize: 38, lineHeight: 1.06, color: '#6b2e1e' }}>
-            How It Works
-          </h3>
-          <div style={{ display: 'grid', gap: 10 }}>
-            {steps.map((step, idx) => (
-              <div key={step.title} style={{ borderTop: idx === 0 ? 'none' : '1px solid #efe4d7', paddingTop: idx === 0 ? 0 : 10 }}>
-                <p style={{ margin: '0 0 3px', fontSize: 16, fontWeight: 700, color: '#3f342f' }}>
-                  {idx + 1}. {step.title}
-                </p>
-                <p style={{ margin: 0, fontSize: 15, color: '#5b4f48' }}>{step.body}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section style={{ marginTop: 24, display: 'grid', gap: 14 }}>
-          {testimonials.map((t) => (
-            <blockquote
-              key={t.name}
-              style={{
-                margin: 0,
-                background: '#fff',
-                border: '1px solid #eadfd1',
-                borderRadius: 16,
-                padding: 18,
-                color: '#4c413a'
-              }}
-            >
-              <p style={{ margin: 0, fontSize: 17, lineHeight: 1.5 }}>“{t.quote}”</p>
-              <footer style={{ marginTop: 10, fontSize: 14, color: '#7a6d65' }}>
-                <strong>{t.name}</strong> · {t.role}
-              </footer>
-            </blockquote>
-          ))}
         </section>
       </div>
     </main>
