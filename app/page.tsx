@@ -1,74 +1,52 @@
-const features = [
-  {
-    title: 'Search + Compare in Seconds',
-    body: 'Your agent gets normalized flight options across routes, airlines, and fare classes with clear tradeoffs.'
-  },
-  {
-    title: 'Human-in-the-Loop Checkout',
-    body: 'Agents create booking intents. Humans confirm before payment so nothing risky happens silently.'
-  },
-  {
-    title: '$1 per Successful Booking Call',
-    body: 'Simple usage pricing for agent builders. No enterprise sales loop required to start.'
-  }
-];
-
-const apiEndpoints = [
-  'POST /v1/search_flights',
-  'POST /v1/price_check',
-  'POST /v1/create_booking_intent',
-  'POST /v1/confirm_booking',
-  'POST /v1/cancel_or_change_options'
-];
-
-export default function Page() {
+export default function HomePage() {
   return (
-    <main style={{ maxWidth: 980, margin: '0 auto', padding: '40px 20px 72px', lineHeight: 1.5 }}>
-      <section style={{ marginBottom: 36 }}>
-        <p style={{ letterSpacing: 1, textTransform: 'uppercase', opacity: 0.75, marginBottom: 8 }}>Flight Agent Infrastructure</p>
-        <h1 style={{ fontSize: 44, margin: 0 }}>Give any AI agent the power to book flights</h1>
-        <p style={{ fontSize: 18, opacity: 0.9, maxWidth: 760 }}>
-          Build travel-capable agents without wrestling GDS complexity. Start with search, pricing, and booking intents — keep humans in control at checkout.
-        </p>
+    <main
+      style={{
+        minHeight: '100vh',
+        display: 'grid',
+        placeItems: 'center',
+        padding: 24,
+        background: '#0b1020',
+        color: '#e8eefc'
+      }}
+    >
+      <div style={{ maxWidth: 760, width: '100%' }}>
+        <p style={{ margin: 0, opacity: 0.8, textTransform: 'uppercase', letterSpacing: 1.1, fontSize: 12 }}>Opal build hub</p>
+        <h1 style={{ marginTop: 10, marginBottom: 8 }}>Current Drafts</h1>
+        <p style={{ marginTop: 0, opacity: 0.9 }}>Live preview pages for Ela review.</p>
 
-        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 20 }}>
-          <button style={{ border: 0, background: '#4f7cff', color: 'white', borderRadius: 10, padding: '12px 16px', fontWeight: 700 }}>
-            Join Beta
-          </button>
-          <button style={{ border: '1px solid #33416f', background: 'transparent', color: 'inherit', borderRadius: 10, padding: '12px 16px', fontWeight: 700 }}>
-            View API Docs
-          </button>
+        <div style={{ display: 'grid', gap: 12, marginTop: 22 }}>
+          <a
+            href="/draft/girlies"
+            style={{
+              textDecoration: 'none',
+              color: '#fff',
+              border: '1px solid #2d3a66',
+              borderRadius: 12,
+              padding: '14px 16px',
+              background: '#121a33'
+            }}
+          >
+            <strong>Landing Page Draft v1</strong>
+            <div style={{ opacity: 0.8, marginTop: 4 }}>Girlies AI Agent $1 offer page</div>
+          </a>
+
+          <a
+            href="/draft/pdf-outline"
+            style={{
+              textDecoration: 'none',
+              color: '#fff',
+              border: '1px solid #2d3a66',
+              borderRadius: 12,
+              padding: '14px 16px',
+              background: '#121a33'
+            }}
+          >
+            <strong>PDF Outline Draft v1</strong>
+            <div style={{ opacity: 0.8, marginTop: 4 }}>Structure + included assets</div>
+          </a>
         </div>
-
-        <p style={{ marginTop: 14, opacity: 0.8 }}>
-          Pricing: <strong>$1 per successful booking call</strong> · Search and price checks metered separately during beta.
-        </p>
-      </section>
-
-      <section style={{ display: 'grid', gap: 14, gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', marginBottom: 40 }}>
-        {features.map((f, i) => (
-          <div key={i} style={{ border: '1px solid #233056', borderRadius: 12, padding: 16, background: '#131a31' }}>
-            <h3 style={{ marginTop: 0 }}>{f.title}</h3>
-            <p style={{ marginBottom: 0, opacity: 0.9 }}>{f.body}</p>
-          </div>
-        ))}
-      </section>
-
-      <section style={{ marginBottom: 40 }}>
-        <h2>Core API</h2>
-        <div style={{ border: '1px solid #233056', borderRadius: 12, padding: 16, background: '#0f152b' }}>
-          {apiEndpoints.map((e) => (
-            <div key={e} style={{ fontFamily: 'monospace', marginBottom: 8 }}>{e}</div>
-          ))}
-        </div>
-      </section>
-
-      <section style={{ borderTop: '1px solid #233056', paddingTop: 22 }}>
-        <h2>Why this exists</h2>
-        <p style={{ maxWidth: 780 }}>
-          Most agents can plan trips, but fail at execution. This gives them a safe booking layer with explicit approval moments, audit logs, and support-ready booking records.
-        </p>
-      </section>
+      </div>
     </main>
   );
 }
