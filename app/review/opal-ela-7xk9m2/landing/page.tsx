@@ -125,16 +125,18 @@ export default function PrivateDraftLandingPage() {
             </p>
 
             <div style={{ display: 'grid', gap: 14, gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
-              <article style={{ background: '#fff', border: '1px solid #ecdccf', borderRadius: 14, padding: 12 }}>
-                <p style={{ margin: '0 0 8px', fontWeight: 800, color: '#6b2e1e', fontSize: 15 }}>Telegram</p>
-                <div style={{ background: '#f2e8dc', borderRadius: 34, padding: 10, border: '1px solid #e6d4bf' }}>
-                  <div style={{ borderRadius: 28, background: '#d9ebcf', border: '2px solid #d8c9b7', overflow: 'hidden' }}>
-                    <div style={{ height: 24, background: '#e9e9e9', display: 'grid', placeItems: 'center', fontSize: 12, color: '#5f5f5f', fontWeight: 600 }}>Opal</div>
-                    <div style={{ padding: 10 }}>
-                      <div style={{ background: '#f7efdd', borderRadius: 12, padding: '10px 11px', marginBottom: 8, color: '#2f2f2f', fontSize: 15, lineHeight: 1.35 }}>
+              <article style={{ background: '#fff', border: '1px solid #e5e7eb', borderRadius: 14, padding: 12 }}>
+                <p style={{ margin: '0 0 8px', fontWeight: 800, color: '#111827', fontSize: 15 }}>Telegram</p>
+                <div style={{ background: '#0f172a', borderRadius: 32, padding: 10 }}>
+                  <div style={{ borderRadius: 26, background: '#d5e8f7', overflow: 'hidden' }}>
+                    <div style={{ height: 26, background: '#ffffff', borderBottom: '1px solid #e5e7eb', display: 'grid', placeItems: 'center', fontSize: 12, color: '#111827', fontWeight: 600 }}>
+                      Opal
+                    </div>
+                    <div style={{ padding: 10, background: 'linear-gradient(#d8ecf9,#cce5f7)' }}>
+                      <div style={{ background: '#ffffff', borderRadius: 10, padding: '9px 10px', marginBottom: 8, color: '#111827', fontSize: 14, lineHeight: 1.35, maxWidth: '92%' }}>
                         i’m at target right now. what have i needed the past month i can get here?
                       </div>
-                      <div style={{ background: '#ffffff', borderRadius: 12, padding: '10px 11px', color: '#2f2f2f', fontSize: 15, lineHeight: 1.35 }}>
+                      <div style={{ background: '#d9fdd3', borderRadius: 10, padding: '9px 10px', color: '#111827', fontSize: 14, lineHeight: 1.35, marginLeft: '8%', maxWidth: '92%' }}>
                         got you: toilet paper, greek yogurt, berries, oat milk, dish pods, and your protein bars.
                       </div>
                     </div>
@@ -142,13 +144,15 @@ export default function PrivateDraftLandingPage() {
                 </div>
               </article>
 
-              <article style={{ background: '#fff', border: '1px solid #ecdccf', borderRadius: 14, padding: 12 }}>
-                <p style={{ margin: '0 0 8px', fontWeight: 800, color: '#6b2e1e', fontSize: 15 }}>WhatsApp</p>
-                <div style={{ background: '#f2e8dc', borderRadius: 34, padding: 10, border: '1px solid #e6d4bf' }}>
-                  <div style={{ borderRadius: 28, background: '#d8eecf', border: '2px solid #d8c9b7', overflow: 'hidden' }}>
-                    <div style={{ height: 24, background: '#e9e9e9', display: 'grid', placeItems: 'center', fontSize: 12, color: '#5f5f5f', fontWeight: 600 }}>Opal</div>
-                    <div style={{ padding: 10 }}>
-                      <div style={{ background: '#ffffff', borderRadius: 12, padding: '10px 11px', color: '#2f2f2f', fontSize: 15, lineHeight: 1.35 }}>
+              <article style={{ background: '#fff', border: '1px solid #e5e7eb', borderRadius: 14, padding: 12 }}>
+                <p style={{ margin: '0 0 8px', fontWeight: 800, color: '#111827', fontSize: 15 }}>WhatsApp</p>
+                <div style={{ background: '#0f172a', borderRadius: 32, padding: 10 }}>
+                  <div style={{ borderRadius: 26, background: '#e5ddd5', overflow: 'hidden' }}>
+                    <div style={{ height: 26, background: '#075e54', display: 'grid', placeItems: 'center', fontSize: 12, color: '#ffffff', fontWeight: 600 }}>
+                      Opal
+                    </div>
+                    <div style={{ padding: 10, background: '#ece5dd' }}>
+                      <div style={{ background: '#dcf8c6', borderRadius: 10, padding: '9px 10px', color: '#111827', fontSize: 14, lineHeight: 1.35, marginLeft: '6%', maxWidth: '94%' }}>
                         good morning selina! your work inbox has two messages from Josh about product design updates waitin for your review. drafted replies are ready & all junk has been cleared.
                         <br /><br />
                         current events for today:
@@ -163,16 +167,18 @@ export default function PrivateDraftLandingPage() {
                 </div>
               </article>
 
-              <article style={{ background: '#fff', border: '1px solid #ecdccf', borderRadius: 14, padding: 12 }}>
-                <p style={{ margin: '0 0 8px', fontWeight: 800, color: '#6b2e1e', fontSize: 15 }}>iMessage</p>
-                <div style={{ background: '#f2e8dc', borderRadius: 34, padding: 10, border: '1px solid #e6d4bf' }}>
-                  <div style={{ borderRadius: 28, background: '#f8f8f8', border: '2px solid #d8c9b7', overflow: 'hidden' }}>
-                    <div style={{ height: 24, background: '#ececec', display: 'grid', placeItems: 'center', fontSize: 12, color: '#5f5f5f', fontWeight: 600 }}>Opal</div>
+              <article style={{ background: '#fff', border: '1px solid #e5e7eb', borderRadius: 14, padding: 12 }}>
+                <p style={{ margin: '0 0 8px', fontWeight: 800, color: '#111827', fontSize: 15 }}>iMessage</p>
+                <div style={{ background: '#0f172a', borderRadius: 32, padding: 10 }}>
+                  <div style={{ borderRadius: 26, background: '#f2f2f7', overflow: 'hidden' }}>
+                    <div style={{ height: 26, background: '#ffffff', borderBottom: '1px solid #e5e7eb', display: 'grid', placeItems: 'center', fontSize: 12, color: '#111827', fontWeight: 600 }}>
+                      Opal
+                    </div>
                     <div style={{ padding: 10 }}>
-                      <div style={{ background: '#e7e7eb', borderRadius: 12, padding: '10px 11px', marginBottom: 8, color: '#2f2f2f', fontSize: 15, lineHeight: 1.35 }}>
+                      <div style={{ background: '#e5e5ea', borderRadius: 14, padding: '9px 10px', marginBottom: 8, color: '#111827', fontSize: 14, lineHeight: 1.35, maxWidth: '92%' }}>
                         i want to buy a new car — contact dealers in my area, negotiate using competitor prices, max budget 25k.
                       </div>
-                      <div style={{ background: '#d1e8ff', borderRadius: 12, padding: '10px 11px', color: '#2f2f2f', fontSize: 15, lineHeight: 1.35 }}>
+                      <div style={{ background: '#007aff', borderRadius: 14, padding: '9px 10px', color: '#ffffff', fontSize: 14, lineHeight: 1.35, marginLeft: '10%', maxWidth: '90%' }}>
                         done! when they reply, i’ll negotiate discounts. if they don’t, i’ll chase them in 48 hours. will let you know when paperworks ready so you can go get your new car✨
                       </div>
                     </div>
