@@ -136,12 +136,10 @@ export default function PrivateDraftLandingPage() {
                     </div>
                     <div style={{ padding: 10, background: 'linear-gradient(135deg, #f7e2d2 0%, #efe8d5 46%, #ead9df 100%)', flex: 1, display: 'flex', flexDirection: 'column' }}>
                       <div style={{ background: '#dff6d1', borderRadius: '12px 12px 4px 12px', padding: '9px 10px', marginBottom: 8, color: '#111827', fontSize: 14, lineHeight: 1.35, marginLeft: '8%', maxWidth: '92%' }}>
-                        I’m at Target and only have 20 mins before I need to be at hte school. What have I needed in the past month that I can get here asap?
+                        I’m at Target and only have 20 mins before pick up. What have I needed in the past month that I can get here ASAP?
                       </div>
                       <div style={{ background: '#ffffff', borderRadius: '12px 12px 12px 4px', padding: '9px 10px', color: '#111827', fontSize: 14, lineHeight: 1.35, maxWidth: '92%', marginBottom: 26 }}>
                         Don’t stress—oat milk, dish pods, markers, hand towels, and your protein bars — and I know you’re on a diet, but you did say you were craving ice cream, so maybe Halo Top low-cal froyo instead?
-                        <br /><br />
-                        you’re killing the mom thing, btw
                       </div>
                     </div>
                     <div style={{ borderTop: '1px solid rgba(0,0,0,0.08)', background: '#f5f7fb', padding: '6px 8px', display: 'flex', alignItems: 'center', gap: 6 }}>
@@ -171,7 +169,7 @@ export default function PrivateDraftLandingPage() {
                         flexDirection: 'column'
                       }}
                     >
-                      <div style={{ background: '#dcf8c6', borderRadius: '12px 12px 4px 12px', padding: '9px 10px', color: '#111827', fontSize: 13, lineHeight: 1.35, marginLeft: '6%', maxWidth: '94%', marginBottom: 22 }}>
+                      <div style={{ background: '#e5e5ea', borderRadius: '12px 12px 12px 4px', padding: '9px 10px', color: '#111827', fontSize: 13, lineHeight: 1.35, maxWidth: '94%', marginBottom: 22 }}>
                         Good morning, Selina! Your work inbox has two messages from Josh about product design updates waiting for your review. Drafted replies are ready, and all junk has been cleared.
                         <br /><br />
                         Current events for today:
@@ -201,10 +199,13 @@ export default function PrivateDraftLandingPage() {
                     </div>
                     <div style={{ padding: 10, flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
                       <div style={{ background: '#007aff', borderRadius: '14px 14px 5px 14px', padding: '9px 10px', marginBottom: 8, color: '#ffffff', fontSize: 14, lineHeight: 1.35, marginLeft: '10%', maxWidth: '90%' }}>
-                        i’m going to buy a jeep wrangler!!!! contact dealers in my area, negotiate using competitor prices, and keep the max budget at $25k??
+                        guess what? i’ve hit my saving goal for the jeep wrangler🙈
+                      </div>
+                      <div style={{ background: '#007aff', borderRadius: '14px 14px 5px 14px', padding: '9px 10px', marginBottom: 8, color: '#ffffff', fontSize: 14, lineHeight: 1.35, marginLeft: '10%', maxWidth: '90%' }}>
+                        contact dealers in my area, negotiate using competitor prices, and keep the max budget at $25k??
                       </div>
                       <div style={{ background: '#e5e5ea', borderRadius: '14px 14px 14px 5px', padding: '9px 10px', color: '#111827', fontSize: 14, lineHeight: 1.35, maxWidth: '92%' }}>
-                        done! when they reply, i’ll negotiate discounts. if they don’t, i’ll follow up in 48 hours. i’ll let you know when the paperwork is ready so you can go get your new car💗
+                        Done! When they reply, I’ll negotiate discounts. If they don’t, I’ll follow up in 48 hours. I’ll let you know when the paperwork is ready so you can go get your new car💗
                       </div>
                     </div>
                     <div style={{ borderTop: '1px solid #e5e7eb', background: '#f7f7f9', padding: '6px 8px', display: 'flex', alignItems: 'center', gap: 6 }}>
