@@ -118,6 +118,53 @@ export default function PrivateDraftLandingPage() {
           <ScrollingCapabilities />
         </section>
 
+        <section style={{ marginBottom: 52 }}>
+          <div style={{ background: '#fffaf3', border: '1px solid #e9dece', borderRadius: 20, padding: '22px 20px' }}>
+            <p className={editorial.className} style={{ margin: '0 0 14px', fontSize: 34, color: '#6b2e1e', lineHeight: 1.08 }}>
+              No terminal, no ChatGPT app, no complicated platforms. Communicate with your AI Assistant through:
+            </p>
+
+            <div style={{ display: 'grid', gap: 14, gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))' }}>
+              <article style={{ background: '#fff', border: '1px solid #ecdccf', borderRadius: 14, padding: 12 }}>
+                <div style={{ background: '#f6ece1', borderRadius: 10, padding: 10, border: '1px solid #eddccb' }}>
+                  <p style={{ margin: '0 0 8px', fontWeight: 700, color: '#6b2e1e', fontSize: 13 }}>Telegram · Opal</p>
+                  <div style={{ background: '#f1d8c6', borderRadius: 10, padding: '8px 9px', marginBottom: 8, color: '#4c3d34', fontSize: 13 }}>
+                    i’m at target right now. what have i needed the past month i can get here?
+                  </div>
+                  <div style={{ background: '#dbc8f0', borderRadius: 10, padding: '8px 9px', color: '#4c3d34', fontSize: 13 }}>
+                    got you 💫 toilet paper, greek yogurt, berries, oat milk, dish pods, and your protein bars.
+                  </div>
+                </div>
+              </article>
+
+              <article style={{ background: '#fff', border: '1px solid #ecdccf', borderRadius: 14, padding: 12 }}>
+                <div style={{ background: '#f6ece1', borderRadius: 10, padding: 10, border: '1px solid #eddccb' }}>
+                  <p style={{ margin: '0 0 8px', fontWeight: 700, color: '#6b2e1e', fontSize: 13 }}>WhatsApp · Opal</p>
+                  <div style={{ background: '#f1d8c6', borderRadius: 10, padding: '8px 9px', color: '#4c3d34', fontSize: 13 }}>
+                    good morning! your inbox has been cleared — two messages from Josh about product design updates. drafted replies are ready. also: world update in 3 bullets below.
+                  </div>
+                </div>
+              </article>
+
+              <article style={{ background: '#fff', border: '1px solid #ecdccf', borderRadius: 14, padding: 12 }}>
+                <div style={{ background: '#f6ece1', borderRadius: 10, padding: 10, border: '1px solid #eddccb' }}>
+                  <p style={{ margin: '0 0 8px', fontWeight: 700, color: '#6b2e1e', fontSize: 13 }}>iMessage · Opal</p>
+                  <div style={{ background: '#f1d8c6', borderRadius: 10, padding: '8px 9px', marginBottom: 8, color: '#4c3d34', fontSize: 13 }}>
+                    i want to buy a new car — contact dealers in my area, negotiate using competitor prices, max budget 25k.
+                  </div>
+                  <div style={{ background: '#dbc8f0', borderRadius: 10, padding: '8px 9px', color: '#4c3d34', fontSize: 13 }}>
+                    done! when they reply, i’ll negotiate discounts. if they don’t, i’ll chase them in 48 hours.
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <p style={{ margin: '14px 0 0', color: '#7e7269', fontSize: 14 }}>
+              Also available on Slack, Discord, and other messaging channels supported by OpenClaw.
+            </p>
+          </div>
+        </section>
+
         <section style={{ marginBottom: 18 }}>
           <article style={{ background: '#fff', border: '1px solid #eadfd1', borderRadius: 20, padding: 24, boxShadow: '0 8px 24px rgba(77,46,34,0.04)' }}>
             <div style={{ borderRadius: 14, background: 'linear-gradient(135deg, #f7e2d2 0%, #efe8d5 46%, #ead9df 100%)', height: 180, marginBottom: 18, display: 'grid', placeItems: 'center', color: '#6b2e1e', fontSize: 13, letterSpacing: 1, textTransform: 'uppercase' }}>
