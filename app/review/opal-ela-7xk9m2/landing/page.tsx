@@ -9,7 +9,7 @@ const bullets = [
   'Troubleshooting guide so you don’t get stuck on setup'
 ];
 
-const letterColors = ['#efc8b3', '#c6c3ad', '#a8efbf', '#bfd0e7', '#8eb8e8', '#f0b6c1', '#f6d09f'];
+const letterColors = ['#dea88b', '#aca88b', '#84c99a', '#97aec9', '#6d9ad0', '#d68f9d', '#dfb477'];
 
 export const metadata = {
   robots: { index: false, follow: false }
