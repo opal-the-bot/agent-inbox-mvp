@@ -106,7 +106,7 @@ export default function PrivateDraftLandingPage() {
             </p>
 
             <p style={{ margin: '16px 0 0', color: '#8c8178', fontSize: 16, lineHeight: 1.55 }}>
-              We’re building Opal (beta), with more guides and drops coming soon.
+              We’re building Opal AI (beta) so everyone can have an AI agent, with more guides and drops coming soon.
               <br />
               Grab a limited copy of our Starter PDF to get your agent running.
             </p>
