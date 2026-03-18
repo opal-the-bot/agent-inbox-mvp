@@ -65,9 +65,9 @@ function ScrollingCapabilities() {
     <div style={{ overflow: 'hidden', border: '1px solid #eadfd1', borderRadius: 16, background: '#fff', boxShadow: '0 8px 20px rgba(77,46,34,0.03)' }}>
       <div style={{ display: 'flex', gap: 14, width: 'max-content', padding: '14px 10px', animation: 'scrollLeft 42s linear infinite' }}>
         {repeated.map((item, idx) => (
-          <div key={`${item.text}-${idx}`} style={{ minWidth: 320, maxWidth: 320, border: '1px solid #f0e5d8', background: '#fffaf3', borderRadius: 12, padding: '14px', display: 'grid', gap: 8 }}>
+          <div key={`${item.text}-${idx}`} style={{ minWidth: 220, maxWidth: 220, border: '1px solid #f0e5d8', background: '#fffaf3', borderRadius: 12, padding: '14px', display: 'grid', gap: 8, minHeight: 170 }}>
             <LineIcon type={item.icon} color={item.color} />
-            <p style={{ margin: 0, color: teachColor, fontSize: 17, lineHeight: 1.38 }}>{item.text}</p>
+            <p style={{ margin: 0, color: teachColor, fontSize: 15, lineHeight: 1.42 }}>{item.text}</p>
           </div>
         ))}
       </div>
