@@ -123,7 +123,7 @@ export default function PrivateDraftLandingPage() {
             <p className={editorial.className} style={{ margin: '0 0 14px', fontSize: 34, color: '#6b2e1e', lineHeight: 1.08 }}>
               No terminal, no ChatGPT app, no complicated platforms.
               <br />
-              <span style={{ display: 'inline-block', marginTop: 8 }}>Customize a personality and communicate with your AI Assistant through:</span>
+              <span style={{ display: 'inline-block', marginTop: 14, fontSize: 30 }}>Customize a personality and communicate with your AI Assistant through:</span>
             </p>
 
             <div style={{ display: 'grid', gap: 14, gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
