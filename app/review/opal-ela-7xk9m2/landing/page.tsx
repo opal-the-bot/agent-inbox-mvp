@@ -140,6 +140,10 @@ export default function PrivateDraftLandingPage() {
                         Got you: toilet paper, Greek yogurt, berries, oat milk, dish pods, and your protein bars.
                       </div>
                     </div>
+                    <div style={{ borderTop: '1px solid rgba(0,0,0,0.08)', background: '#f5f7fb', padding: '6px 8px', display: 'flex', alignItems: 'center', gap: 6 }}>
+                      <div style={{ flex: 1, background: '#ffffff', border: '1px solid #d3dce6', borderRadius: 16, padding: '5px 9px', fontSize: 11, color: '#6b7280' }}>Message</div>
+                      <div style={{ width: 20, height: 20, borderRadius: '50%', background: '#9ca3af' }} />
+                    </div>
                   </div>
                 </div>
               </article>
@@ -172,6 +176,11 @@ export default function PrivateDraftLandingPage() {
                         ...
                       </div>
                     </div>
+                    <div style={{ borderTop: '1px solid rgba(0,0,0,0.08)', background: '#f0f2f5', padding: '6px 8px', display: 'flex', alignItems: 'center', gap: 6 }}>
+                      <div style={{ width: 18, height: 18, borderRadius: '50%', background: '#9ca3af' }} />
+                      <div style={{ flex: 1, background: '#ffffff', border: '1px solid #d1d5db', borderRadius: 16, padding: '5px 9px', fontSize: 11, color: '#6b7280' }}>Message</div>
+                      <div style={{ width: 18, height: 18, borderRadius: '50%', background: '#22c55e' }} />
+                    </div>
                   </div>
                 </div>
               </article>
@@ -190,6 +199,11 @@ export default function PrivateDraftLandingPage() {
                       <div style={{ background: '#e5e5ea', borderRadius: '14px 14px 14px 5px', padding: '9px 10px', color: '#111827', fontSize: 14, lineHeight: 1.35, maxWidth: '92%' }}>
                         Done! When they reply, I’ll negotiate discounts. If they don’t, I’ll follow up in 48 hours. I’ll let you know when the paperwork is ready so you can go get your new car✨
                       </div>
+                    </div>
+                    <div style={{ borderTop: '1px solid #e5e7eb', background: '#f7f7f9', padding: '6px 8px', display: 'flex', alignItems: 'center', gap: 6 }}>
+                      <div style={{ width: 18, height: 18, borderRadius: '50%', background: '#9ca3af' }} />
+                      <div style={{ flex: 1, background: '#ffffff', border: '1px solid #d1d5db', borderRadius: 16, padding: '5px 9px', fontSize: 11, color: '#6b7280' }}>iMessage</div>
+                      <div style={{ width: 18, height: 18, borderRadius: '50%', background: '#007aff' }} />
                     </div>
                   </div>
                 </div>
