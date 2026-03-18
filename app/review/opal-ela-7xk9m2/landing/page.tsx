@@ -29,7 +29,7 @@ export const metadata = {
 function LogoSelectedC() {
   const letters = ['O', 'p', 'a', 'l', ' ', 'A', 'I'];
   return (
-    <div className={editorial.className} style={{ fontSize: 54, letterSpacing: '-0.03em', lineHeight: 1, fontWeight: 500 }}>
+    <div className={editorial.className} style={{ fontSize: 60, letterSpacing: '-0.03em', lineHeight: 1, fontWeight: 500 }}>
       {letters.map((ch, i) =>
         ch === ' ' ? (
           <span key={`s-${i}`} style={{ marginRight: '0.14em' }} />
@@ -88,7 +88,7 @@ export default function PrivateDraftLandingPage() {
           <div style={{ marginTop: 10 }}>
             <LogoSelectedC />
           </div>
-          <p style={{ margin: '10px 0 0', color: teachColor, fontSize: 15, lineHeight: 1.45, maxWidth: 900 }}>
+          <p style={{ margin: '10px 0 0', color: teachColor, fontSize: 17, lineHeight: 1.45, maxWidth: 900 }}>
             Give them a fish, feed them for a day. Teach them to fish, feed them for a lifetime.
           </p>
         </header>
