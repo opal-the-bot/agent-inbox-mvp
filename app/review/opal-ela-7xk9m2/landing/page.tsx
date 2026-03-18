@@ -101,11 +101,9 @@ export default function PrivateDraftLandingPage() {
 
             <p style={{ margin: '16px 0 0', color: '#5f534b', fontSize: 24, lineHeight: 1.45 }}>
               <strong>No coding required.</strong> <strong>No AI experience required.</strong>
-              <br />
-              Affordable and fully customizable to you, unlike expensive AI software that boxes you in.
             </p>
 
-            <p style={{ margin: '16px 0 0', color: '#8c8178', fontSize: 16, lineHeight: 1.55 }}>
+            <p style={{ margin: '16px 0 0', color: '#5f534b', fontSize: 24, lineHeight: 1.45, fontWeight: 600 }}>
               We’re building Opal AI (beta) so everyone can have an AI agent, with more guides and drops coming soon. Grab a limited copy of our Starter PDF to get your agent running.
             </p>
           </div>
@@ -123,7 +121,7 @@ export default function PrivateDraftLandingPage() {
             <p className={editorial.className} style={{ margin: '0 0 14px', fontSize: 34, color: '#6b2e1e', lineHeight: 1.08 }}>
               No terminal, no apps, no complicated platforms.
               <br />
-              <span style={{ display: 'inline-block', marginTop: 14, fontSize: 30 }}>Customize a personality and communicate with your AI Assistant through:</span>
+              <span style={{ display: 'inline-block', marginTop: 14, fontSize: 30 }}>Choose a personality, send tasks, and communicate through:</span>
             </p>
 
             <div style={{ display: 'grid', gap: 14, gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
