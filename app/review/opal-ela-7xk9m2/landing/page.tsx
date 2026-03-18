@@ -105,7 +105,7 @@ export default function PrivateDraftLandingPage() {
               <span style={{ fontSize: 21 }}>Unlike expensive AI software that boxes you in, building your own agent is inexpensive and fully customizable to you.</span>
             </p>
 
-            <p style={{ margin: '16px 0 0', color: '#5f534b', fontSize: 24, lineHeight: 1.45, fontWeight: 600 }}>
+            <p style={{ margin: '16px 0 0', color: '#6b5a4f', fontSize: 18, lineHeight: 1.5, fontWeight: 500 }}>
               We’re building Opal AI (beta) so everyone can have an AI agent, with more guides and drops coming soon. Grab a limited copy of our Starter PDF to get your agent running.
             </p>
           </div>
@@ -273,3 +273,4 @@ export default function PrivateDraftLandingPage() {
     </main>
   );
 }
+
