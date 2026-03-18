@@ -139,7 +139,7 @@ export default function PrivateDraftLandingPage() {
                         I’m at Target right now. What have I needed in the past month that I can get here?
                       </div>
                       <div style={{ background: '#ffffff', borderRadius: '12px 12px 12px 4px', padding: '9px 10px', color: '#111827', fontSize: 14, lineHeight: 1.35, maxWidth: '92%' }}>
-                        Got you: toilet paper, Greek yogurt, berries, oat milk, dish pods, markers, hand towels, and your protein bars — and I know you’re on a diet, but you did say you were craving ice cream, so maybe Halo Top low-cal froyo instead?
+                        Got you: toilet paper, Greek yogurt, berries, oat milk, dish pods, markers, hand towels, and your protein bars.
                       </div>
                     </div>
                     <div style={{ borderTop: '1px solid rgba(0,0,0,0.08)', background: '#f5f7fb', padding: '6px 8px', display: 'flex', alignItems: 'center', gap: 6 }}>
