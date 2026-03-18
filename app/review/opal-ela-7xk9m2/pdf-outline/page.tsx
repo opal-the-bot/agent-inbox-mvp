@@ -1,32 +1,84 @@
+import { Cormorant_Garamond } from 'next/font/google';
+
+const editorial = Cormorant_Garamond({ subsets: ['latin'], weight: ['500', '600', '700'] });
+
 const sections = [
-  'Welcome + FOMO-to-Flow',
-  'What an AI agent actually is (in plain English)',
-  'OpenClaw setup + onboarding',
-  'Telegram group setup with topics by project',
-  'Your first useful workflows',
-  'Telegram prompts you can copy/paste',
-  'Make it feel like yours',
-  'CEO mode mini-system',
-  'Troubleshooting + FAQ',
-  'Next steps'
+  {
+    title: 'Secure foundation first (SSH + Tailscale)',
+    points: ['Private server access', 'SSH key setup', 'Tailscale network']
+  },
+  {
+    title: 'Install OpenClaw in terminal',
+    points: ['Install + onboard', 'Telegram pairing', 'First successful message']
+  },
+  {
+    title: 'Telegram multi-project setup',
+    points: ['One group, multiple topics', 'Project context separation', 'Daily topic summaries']
+  },
+  {
+    title: 'Memory upgrade prompting (Ela-style)',
+    points: ['Daily + nightly memory loop', 'Priorities + blockers', 'No dropped decisions']
+  },
+  {
+    title: 'Connect to Gmail (safe mode)',
+    points: ['Draft-first workflows', 'Human approval for sends', 'Inbox cleanup automation']
+  }
+];
+
+const imageChecklist = [
+  'VPS create screen',
+  'SSH key generation',
+  'Tailscale machine view',
+  'OpenClaw onboard terminal',
+  'Telegram pairing approval',
+  'Telegram topic/channel layout',
+  'Memory docs before/after',
+  'Gmail draft flow'
 ];
 
 export const metadata = {
   robots: { index: false, follow: false }
 };
 
-export default function PrivateOutlinePage() {
+export default function PdfDraftV1Page() {
   return (
-    <main style={{ minHeight: '100vh', background: '#fff', color: '#1d1d1f', padding: '46px 20px 70px' }}>
-      <div style={{ maxWidth: 820, margin: '0 auto' }}>
-        <p style={{ margin: 0, textTransform: 'uppercase', letterSpacing: 1.2, fontSize: 12, color: '#7c7c85' }}>Private review outline v1</p>
-        <h1 style={{ margin: '10px 0 6px', fontSize: 'clamp(30px, 5.6vw, 52px)' }}>Your Little AI Assistant</h1>
-        <p style={{ marginTop: 0, fontSize: 18, color: '#4c4c55' }}>Build it in Telegram (even if you’re new)</p>
-        <ol style={{ paddingLeft: 22, display: 'grid', gap: 8 }}>
+    <main style={{ minHeight: '100vh', background: '#f7f4ed', color: '#1f1d1a', padding: '42px 20px 70px' }}>
+      <div style={{ maxWidth: 880, margin: '0 auto' }}>
+        <p style={{ margin: 0, textTransform: 'uppercase', letterSpacing: 1.2, fontSize: 12, color: '#7a7268' }}>Private PDF draft v1</p>
+
+        <h1 className={editorial.className} style={{ margin: '10px 0 6px', fontSize: 'clamp(34px, 6vw, 64px)', color: '#6b2e1e', fontWeight: 500 }}>
+          Set Up Your AI Agent
+        </h1>
+        <p style={{ marginTop: 0, fontSize: 18, color: '#4c453f' }}>
+          Beginner-friendly guide to secure setup, memory upgrades, multi-project Telegram workflow, and Gmail cleanup.
+        </p>
+
+        <section style={{ marginTop: 24, display: 'grid', gap: 12 }}>
           {sections.map((s) => (
-            <li key={s}>{s}</li>
+            <article key={s.title} style={{ background: '#fff', border: '1px solid #e9dece', borderRadius: 14, padding: 16 }}>
+              <h2 className={editorial.className} style={{ margin: '0 0 8px', color: '#6b2e1e', fontSize: 32, fontWeight: 600 }}>
+                {s.title}
+              </h2>
+              <ul style={{ margin: 0, paddingLeft: 20, color: '#4d453f' }}>
+                {s.points.map((p) => (
+                  <li key={p}>{p}</li>
+                ))}
+              </ul>
+            </article>
           ))}
-        </ol>
+        </section>
+
+        <section style={{ marginTop: 24, background: '#fff', border: '1px solid #e9dece', borderRadius: 14, padding: 16 }}>
+          <h2 className={editorial.className} style={{ margin: '0 0 8px', color: '#6b2e1e', fontSize: 32, fontWeight: 600 }}>
+            Photo demonstration checklist
+          </h2>
+          <p style={{ marginTop: 0, color: '#5d544c' }}>Yes — images are possible. Share these screenshots and I’ll place + annotate them in v2.</p>
+          <ul style={{ margin: 0, paddingLeft: 20, color: '#4d453f', display: 'grid', gap: 6 }}>
+            {imageChecklist.map((i) => (
+              <li key={i}>{i}</li>
+            ))}
+          </ul>
+        </section>
       </div>
     </main>
   );
