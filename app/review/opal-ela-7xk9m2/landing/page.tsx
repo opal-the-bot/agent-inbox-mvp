@@ -113,7 +113,7 @@ export default function PrivateDraftLandingPage() {
 
         <section style={{ marginBottom: 52 }}>
           <p className={editorial.className} style={{ margin: '0 0 14px', fontSize: 34, color: '#6b2e1e', lineHeight: 1.05 }}>
-            Here’s what you can do with your AI assistant:
+            Here's what an AI assistant can do for you
           </p>
           <ScrollingCapabilities />
         </section>
