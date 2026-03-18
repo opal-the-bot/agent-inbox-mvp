@@ -136,10 +136,10 @@ export default function PrivateDraftLandingPage() {
                     </div>
                     <div style={{ padding: 10, background: 'linear-gradient(135deg, #f7e2d2 0%, #efe8d5 46%, #ead9df 100%)', flex: 1, display: 'flex', flexDirection: 'column' }}>
                       <div style={{ background: '#dff6d1', borderRadius: '12px 12px 4px 12px', padding: '9px 10px', marginBottom: 8, color: '#111827', fontSize: 14, lineHeight: 1.35, marginLeft: '8%', maxWidth: '92%' }}>
-                        I’m at Target right now. What have I needed in the past month that I can get here?
+                        I’m at Target and only have 20 mins before I need to be at hte school. What have I needed in the past month that I can get here asap?
                       </div>
                       <div style={{ background: '#ffffff', borderRadius: '12px 12px 12px 4px', padding: '9px 10px', color: '#111827', fontSize: 14, lineHeight: 1.35, maxWidth: '92%', marginBottom: 26 }}>
-                        Got you: oat milk, dish pods, markers, hand towels, and your protein bars — and I know you’re on a diet, but you did say you were craving ice cream, so maybe Halo Top low-cal froyo instead?
+                        Don’t stress—oat milk, dish pods, markers, hand towels, and your protein bars — and I know you’re on a diet, but you did say you were craving ice cream, so maybe Halo Top low-cal froyo instead?
                         <br /><br />
                         you’re killing the mom thing, btw
                       </div>
