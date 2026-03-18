@@ -161,7 +161,7 @@ export default function PrivateDraftLandingPage() {
                       }}
                     >
                       <div style={{ background: '#dcf8c6', borderRadius: '12px 12px 4px 12px', padding: '9px 10px', color: '#111827', fontSize: 14, lineHeight: 1.35, marginLeft: '6%', maxWidth: '94%' }}>
-                        Good morning, Selina! Your work inbox has two messages from Josh about product design updates waiting for your review. Drafted replies are ready, and all junk has been cleared...
+                        Good morning, Selina! Your work inbox has two messages from Josh about product design updates waiting for your review. Drafted replies are ready, and all junk has been cleared.
                         <br /><br />
                         Current events for today:
                         <ul style={{ margin: '6px 0 0 16px', padding: 0 }}>
@@ -169,6 +169,7 @@ export default function PrivateDraftLandingPage() {
                           <li>US officials said Iran’s regime is “intact” but “degraded” after recent strikes.</li>
                           <li>Sony removed 135,000 AI deepfake tracks of its artists from streaming platforms.</li>
                         </ul>
+                        ...
                       </div>
                     </div>
                   </div>
