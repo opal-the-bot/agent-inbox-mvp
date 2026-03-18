@@ -130,11 +130,11 @@ export default function PrivateDraftLandingPage() {
               <article style={{ background: '#fff', border: '1px solid #e5e7eb', borderRadius: 14, padding: 12 }}>
                 <p style={{ margin: '0 0 8px', fontWeight: 800, color: '#111827', fontSize: 15 }}>Telegram</p>
                 <div style={{ background: '#0f172a', borderRadius: 32, padding: 10 }}>
-                  <div style={{ borderRadius: 26, background: '#d5e8f7', overflow: 'hidden', minHeight: 350 }}>
+                  <div style={{ borderRadius: 26, background: '#d5e8f7', overflow: 'hidden', height: 420, display: 'flex', flexDirection: 'column' }}>
                     <div style={{ height: 26, background: '#ffffff', borderBottom: '1px solid #e5e7eb', display: 'grid', placeItems: 'center', fontSize: 12, color: '#111827', fontWeight: 600 }}>
                       Opal
                     </div>
-                    <div style={{ padding: 10, background: 'linear-gradient(135deg, #f7e2d2 0%, #efe8d5 46%, #ead9df 100%)' }}>
+                    <div style={{ padding: 10, background: 'linear-gradient(135deg, #f7e2d2 0%, #efe8d5 46%, #ead9df 100%)', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
                       <div style={{ background: '#dff6d1', borderRadius: '12px 12px 4px 12px', padding: '9px 10px', marginBottom: 8, color: '#111827', fontSize: 14, lineHeight: 1.35, marginLeft: '8%', maxWidth: '92%' }}>
                         I’m at Target right now. What have I needed in the past month that I can get here?
                       </div>
@@ -153,7 +153,7 @@ export default function PrivateDraftLandingPage() {
               <article style={{ background: '#fff', border: '1px solid #e5e7eb', borderRadius: 14, padding: 12 }}>
                 <p style={{ margin: '0 0 8px', fontWeight: 800, color: '#111827', fontSize: 15 }}>WhatsApp</p>
                 <div style={{ background: '#0f172a', borderRadius: 32, padding: 10 }}>
-                  <div style={{ borderRadius: 26, background: '#efeae2', overflow: 'hidden', minHeight: 350 }}>
+                  <div style={{ borderRadius: 26, background: '#efeae2', overflow: 'hidden', height: 420, display: 'flex', flexDirection: 'column' }}>
                     <div style={{ height: 26, background: '#075e54', display: 'grid', placeItems: 'center', fontSize: 12, color: '#ffffff', fontWeight: 600 }}>
                       Opal
                     </div>
@@ -163,7 +163,11 @@ export default function PrivateDraftLandingPage() {
                         backgroundColor: '#efeae2',
                         backgroundImage:
                           'radial-gradient(circle at 12px 12px, #ddd5cb 1.1px, transparent 1.2px), radial-gradient(circle at 30px 28px, #ddd5cb 1.1px, transparent 1.2px)',
-                        backgroundSize: '42px 42px'
+                        backgroundSize: '42px 42px',
+                        flex: 1,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'flex-end'
                       }}
                     >
                       <div style={{ background: '#dcf8c6', borderRadius: '12px 12px 4px 12px', padding: '9px 10px', color: '#111827', fontSize: 14, lineHeight: 1.35, marginLeft: '6%', maxWidth: '94%' }}>
@@ -190,11 +194,11 @@ export default function PrivateDraftLandingPage() {
               <article style={{ background: '#fff', border: '1px solid #e5e7eb', borderRadius: 14, padding: 12 }}>
                 <p style={{ margin: '0 0 8px', fontWeight: 800, color: '#111827', fontSize: 15 }}>iMessage</p>
                 <div style={{ background: '#0f172a', borderRadius: 32, padding: 10 }}>
-                  <div style={{ borderRadius: 26, background: '#f2f2f7', overflow: 'hidden', minHeight: 350 }}>
+                  <div style={{ borderRadius: 26, background: '#f2f2f7', overflow: 'hidden', height: 420, display: 'flex', flexDirection: 'column' }}>
                     <div style={{ height: 26, background: '#ffffff', borderBottom: '1px solid #e5e7eb', display: 'grid', placeItems: 'center', fontSize: 12, color: '#111827', fontWeight: 600 }}>
                       Opal
                     </div>
-                    <div style={{ padding: 10 }}>
+                    <div style={{ padding: 10, flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
                       <div style={{ background: '#007aff', borderRadius: '14px 14px 5px 14px', padding: '9px 10px', marginBottom: 8, color: '#ffffff', fontSize: 14, lineHeight: 1.35, marginLeft: '10%', maxWidth: '90%' }}>
                         I want to buy a new car. Contact dealers in my area, negotiate using competitor prices, and keep the max budget at $25k.
                       </div>
