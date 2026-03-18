@@ -34,7 +34,7 @@ function LogoSelectedC() {
 
 export default function GirliesPrivateDraftPage() {
   return (
-    <main style={{ minHeight: '100vh', background: '#eeede2', color: '#171717', padding: '48px 20px 72px' }}>
+    <main style={{ minHeight: '100vh', background: '#f3efe6', color: '#171717', padding: '48px 20px 72px' }}>
       <div style={{ maxWidth: 860, margin: '0 auto' }}>
         <p style={{ margin: 0, letterSpacing: 1.4, textTransform: 'uppercase', fontSize: 12, color: '#7a5b61' }}>Private review draft v3</p>
 
