@@ -21,7 +21,11 @@ const sections = [
   },
   {
     title: 'Connect to Gmail (safe mode)',
-    points: ['Draft-first workflows', 'Human approval for sends', 'Inbox cleanup automation']
+    points: ['Read + draft + archive permissions', 'No direct send permission', 'Human approval required']
+  },
+  {
+    title: 'Promote + improve your OpenClaw agent',
+    points: ['Simple content loop', 'Mistake-recovery prompting', 'Permanent fix workflow']
   }
 ];
 
