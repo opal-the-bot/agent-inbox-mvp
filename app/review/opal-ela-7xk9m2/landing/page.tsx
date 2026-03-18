@@ -12,14 +12,14 @@ const outcomes = [
 ];
 
 const marqueeItems = [
-  { icon: '📧', text: 'Manage your inbox & draft replies to your team' },
-  { icon: '🛒', text: 'Run your grocery & to-do lists' },
-  { icon: '🌙', text: 'Finish your work while you sleep' },
-  { icon: '📱', text: 'Analyze social media and get your best content ideas' },
-  { icon: '🧠', text: 'Remember decisions, priorities, and blockers automatically' },
-  { icon: '📅', text: 'Plan your day with a clear morning brief' },
-  { icon: '🧾', text: 'Summarize meetings and turn them into action items' },
-  { icon: '🚨', text: 'Catch blockers early before they slow you down' }
+  { icon: '📧', text: 'Unsubscribe from junk mail you hate & draft perfect replies to your scary boss before you wake up' },
+  { icon: '🛒', text: 'Build your grocery list from your week + remind you before you run out of oat milk' },
+  { icon: '🌙', text: 'Do your boring admin while you sleep so you wake up to “already handled”' },
+  { icon: '📱', text: 'Stalk your niche (politely) and hand you content ideas that actually sound like you' },
+  { icon: '🧠', text: 'Remember random genius ideas you drop at 1:07am and resurface them when needed' },
+  { icon: '📅', text: 'Give you a no-BS morning plan so you stop doomscrolling and start moving' },
+  { icon: '🧾', text: 'Turn messy meeting notes into clear action steps with owners and deadlines' },
+  { icon: '✈️', text: 'Compare flight options and prep a trip shortlist before your coffee is ready' }
 ];
 
 export const metadata = {
@@ -106,8 +106,6 @@ export default function PrivateDraftLandingPage() {
           </div>
           <p style={{ margin: '10px 0 0', color: '#6b5a4f', fontSize: 13, lineHeight: 1.45, maxWidth: 900 }}>
             Give them a fish, feed them for a day. Teach them to fish, feed them for a lifetime.
-            <br />
-            Everything you need to learn to create your own AI agent, simplified and ELI5-ed. You’ll have the power to make yours fully customized to you — no more paying for expensive wrappers that don’t work.
           </p>
         </header>
 
@@ -121,11 +119,11 @@ export default function PrivateDraftLandingPage() {
           }}
         >
           <h1 className={editorial.className} style={{ fontSize: 'clamp(28px, 3.7vw, 42px)', lineHeight: 1.15, margin: '0 0 12px', color: '#6b2e1e', fontWeight: 500, maxWidth: 920 }}>
-            We’ve done the hard part and listened to too many tech bros teach OpenClaw on YouTube. We’ve tried hundreds of options and simplified the best way you need to create your own AI agent assistant using only your computer.
+            Everything you need to learn to create your own AI agent, simplified and ELI5-ed. You’ll have the power to make yours fully customized to you — no more paying for expensive wrappers that don’t work.
           </h1>
 
           <p className={editorial.className} style={{ margin: '12px 0 12px', fontSize: 33, color: '#6b2e1e', lineHeight: 1.05 }}>
-            here’s what you can do with your AI assistant
+            Here’s What You Can Do with Your AI Assistant
           </p>
 
           <ScrollingCapabilities />
@@ -190,6 +188,21 @@ export default function PrivateDraftLandingPage() {
               </div>
             </div>
           </article>
+        </section>
+
+        <section
+          style={{
+            marginTop: 16,
+            background: '#fffaf3',
+            border: '1px solid #e9dece',
+            borderRadius: 16,
+            padding: '16px 18px'
+          }}
+        >
+          <p style={{ margin: 0, color: '#5b4d44', fontSize: 15, lineHeight: 1.5 }}>
+            We’ve done the hard part — sat through way too many tech bros explaining OpenClaw on YouTube, tested hundreds of setups,
+            and distilled it into the simplest way to build your own AI assistant using just your computer.
+          </p>
         </section>
       </div>
     </main>
