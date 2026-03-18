@@ -160,7 +160,7 @@ export default function PrivateDraftLandingPage() {
                     <div
                       style={{
                         padding: 10,
-                        background: 'linear-gradient(180deg, #a3d65c 0%, #2f6f2a 100%)',
+                        background: 'linear-gradient(135deg, #f7e2d2 0%, #efe8d5 46%, #ead9df 100%)',
                         flex: 1,
                         display: 'flex',
                         flexDirection: 'column'
