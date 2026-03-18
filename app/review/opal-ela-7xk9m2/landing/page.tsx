@@ -147,11 +147,19 @@ export default function PrivateDraftLandingPage() {
               <article style={{ background: '#fff', border: '1px solid #e5e7eb', borderRadius: 14, padding: 12 }}>
                 <p style={{ margin: '0 0 8px', fontWeight: 800, color: '#111827', fontSize: 15 }}>WhatsApp</p>
                 <div style={{ background: '#0f172a', borderRadius: 32, padding: 10 }}>
-                  <div style={{ borderRadius: 26, background: '#e5ddd5', overflow: 'hidden', minHeight: 350 }}>
+                  <div style={{ borderRadius: 26, background: '#efeae2', overflow: 'hidden', minHeight: 350 }}>
                     <div style={{ height: 26, background: '#075e54', display: 'grid', placeItems: 'center', fontSize: 12, color: '#ffffff', fontWeight: 600 }}>
                       Opal
                     </div>
-                    <div style={{ padding: 10, background: '#ece5dd' }}>
+                    <div
+                      style={{
+                        padding: 10,
+                        backgroundColor: '#efeae2',
+                        backgroundImage:
+                          'radial-gradient(circle at 12px 12px, #ddd5cb 1.1px, transparent 1.2px), radial-gradient(circle at 30px 28px, #ddd5cb 1.1px, transparent 1.2px)',
+                        backgroundSize: '42px 42px'
+                      }}
+                    >
                       <div style={{ background: '#dcf8c6', borderRadius: '12px 12px 4px 12px', padding: '9px 10px', color: '#111827', fontSize: 14, lineHeight: 1.35, marginLeft: '6%', maxWidth: '94%' }}>
                         good morning selina! your work inbox has two messages from Josh about product design updates waitin for your review. drafted replies are ready & all junk has been cleared...
                         <br /><br />
