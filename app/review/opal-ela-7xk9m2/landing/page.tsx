@@ -121,39 +121,58 @@ export default function PrivateDraftLandingPage() {
         <section style={{ marginBottom: 52 }}>
           <div style={{ background: '#fffaf3', border: '1px solid #e9dece', borderRadius: 20, padding: '22px 20px' }}>
             <p className={editorial.className} style={{ margin: '0 0 14px', fontSize: 34, color: '#6b2e1e', lineHeight: 1.08 }}>
-              No terminal, no ChatGPT app, no complicated platforms. Communicate with your AI Assistant through:
+              No terminal, no ChatGPT app, no complicated platforms. Customize a personality and communicate with your AI Assistant through:
             </p>
 
-            <div style={{ display: 'grid', gap: 14, gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))' }}>
+            <div style={{ display: 'grid', gap: 14, gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
               <article style={{ background: '#fff', border: '1px solid #ecdccf', borderRadius: 14, padding: 12 }}>
-                <div style={{ background: '#f6ece1', borderRadius: 10, padding: 10, border: '1px solid #eddccb' }}>
-                  <p style={{ margin: '0 0 8px', fontWeight: 700, color: '#6b2e1e', fontSize: 13 }}>Telegram · Opal</p>
-                  <div style={{ background: '#f1d8c6', borderRadius: 10, padding: '8px 9px', marginBottom: 8, color: '#4c3d34', fontSize: 13 }}>
-                    i’m at target right now. what have i needed the past month i can get here?
-                  </div>
-                  <div style={{ background: '#dbc8f0', borderRadius: 10, padding: '8px 9px', color: '#4c3d34', fontSize: 13 }}>
-                    got you 💫 toilet paper, greek yogurt, berries, oat milk, dish pods, and your protein bars.
+                <div style={{ background: '#f6ece1', borderRadius: 28, padding: 10, border: '1px solid #eddccb' }}>
+                  <div style={{ borderRadius: 24, background: '#fff', border: '1px solid #eadfd1', overflow: 'hidden' }}>
+                    <div style={{ height: 22, background: '#f4ede4', display: 'grid', placeItems: 'center', fontSize: 11, color: '#6f6259' }}>Telegram · Opal (Planner personality)</div>
+                    <div style={{ padding: 10 }}>
+                      <div style={{ background: '#f1d8c6', borderRadius: 12, padding: '10px 11px', marginBottom: 8, color: '#4c3d34', fontSize: 14, lineHeight: 1.35 }}>
+                        i’m at target right now. what have i needed the past month i can get here?
+                      </div>
+                      <div style={{ background: '#dbc8f0', borderRadius: 12, padding: '10px 11px', color: '#4c3d34', fontSize: 14, lineHeight: 1.35 }}>
+                        got you 💫 toilet paper, greek yogurt, berries, oat milk, dish pods, and your protein bars.
+                      </div>
+                    </div>
                   </div>
                 </div>
               </article>
 
               <article style={{ background: '#fff', border: '1px solid #ecdccf', borderRadius: 14, padding: 12 }}>
-                <div style={{ background: '#f6ece1', borderRadius: 10, padding: 10, border: '1px solid #eddccb' }}>
-                  <p style={{ margin: '0 0 8px', fontWeight: 700, color: '#6b2e1e', fontSize: 13 }}>WhatsApp · Opal</p>
-                  <div style={{ background: '#f1d8c6', borderRadius: 10, padding: '8px 9px', color: '#4c3d34', fontSize: 13 }}>
-                    good morning! your inbox has been cleared — two messages from Josh about product design updates. drafted replies are ready. also: world update in 3 bullets below.
+                <div style={{ background: '#f6ece1', borderRadius: 28, padding: 10, border: '1px solid #eddccb' }}>
+                  <div style={{ borderRadius: 24, background: '#fff', border: '1px solid #eadfd1', overflow: 'hidden' }}>
+                    <div style={{ height: 22, background: '#f4ede4', display: 'grid', placeItems: 'center', fontSize: 11, color: '#6f6259' }}>WhatsApp · Opal (Chief of Staff personality)</div>
+                    <div style={{ padding: 10 }}>
+                      <div style={{ background: '#f1d8c6', borderRadius: 12, padding: '10px 11px', color: '#4c3d34', fontSize: 14, lineHeight: 1.35 }}>
+                        good morning selina! your work inbox has two messages from Josh about product design updates waitin for your review. drafted replies are ready & all junk has been cleared.
+                        <br /><br />
+                        current events for today:
+                        <ul style={{ margin: '6px 0 0 16px', padding: 0 }}>
+                          <li>Iran retaliation reportedly caused extensive damage at a Qatar industrial site.</li>
+                          <li>US officials said Iran’s regime is "intact" but "degraded" after recent strikes.</li>
+                          <li>Sony removed 135,000 AI deepfake tracks of its artists from streaming platforms.</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </article>
 
               <article style={{ background: '#fff', border: '1px solid #ecdccf', borderRadius: 14, padding: 12 }}>
-                <div style={{ background: '#f6ece1', borderRadius: 10, padding: 10, border: '1px solid #eddccb' }}>
-                  <p style={{ margin: '0 0 8px', fontWeight: 700, color: '#6b2e1e', fontSize: 13 }}>iMessage · Opal</p>
-                  <div style={{ background: '#f1d8c6', borderRadius: 10, padding: '8px 9px', marginBottom: 8, color: '#4c3d34', fontSize: 13 }}>
-                    i want to buy a new car — contact dealers in my area, negotiate using competitor prices, max budget 25k.
-                  </div>
-                  <div style={{ background: '#dbc8f0', borderRadius: 10, padding: '8px 9px', color: '#4c3d34', fontSize: 13 }}>
-                    done! when they reply, i’ll negotiate discounts. if they don’t, i’ll chase them in 48 hours.
+                <div style={{ background: '#f6ece1', borderRadius: 28, padding: 10, border: '1px solid #eddccb' }}>
+                  <div style={{ borderRadius: 24, background: '#fff', border: '1px solid #eadfd1', overflow: 'hidden' }}>
+                    <div style={{ height: 22, background: '#f4ede4', display: 'grid', placeItems: 'center', fontSize: 11, color: '#6f6259' }}>iMessage · Opal (Negotiator personality)</div>
+                    <div style={{ padding: 10 }}>
+                      <div style={{ background: '#f1d8c6', borderRadius: 12, padding: '10px 11px', marginBottom: 8, color: '#4c3d34', fontSize: 14, lineHeight: 1.35 }}>
+                        i want to buy a new car — contact dealers in my area, negotiate using competitor prices, max budget 25k.
+                      </div>
+                      <div style={{ background: '#dbc8f0', borderRadius: 12, padding: '10px 11px', color: '#4c3d34', fontSize: 14, lineHeight: 1.35 }}>
+                        done! when they reply, i’ll negotiate discounts. if they don’t, i’ll chase them in 48 hours. will let you know when paperworks ready so you can go get your new car✨
+                      </div>
+                    </div>
                   </div>
                 </div>
               </article>
