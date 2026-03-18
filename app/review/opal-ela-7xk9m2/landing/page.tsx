@@ -19,7 +19,7 @@ const marqueeItems = [
   { icon: 'home', text: 'Control your lights, purifiers, and smart home setup', color: logoColors[1] },
   { icon: 'brief', text: 'Text you a 6am brief on news you actually care about', color: logoColors[6] },
   { icon: 'moon', text: 'Handle boring admin while you sleep', color: logoColors[5] },
-  { icon: 'mail', text: 'Unsubscribe junk mail and draft clean work replies', color: logoColors[3] }
+  { icon: 'mail', text: 'Unsubscribe from junk mail and draft replies to teammates', color: logoColors[3] }
 ];
 
 export const metadata = {
