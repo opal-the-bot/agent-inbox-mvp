@@ -13,13 +13,13 @@ const outcomes = [
 ];
 
 const marqueeItems = [
-  { icon: 'brain', text: 'Remember genius ideas you drop at 1:07am and resurface them when needed', color: logoColors[2] },
-  { icon: 'spark', text: 'Doomscroll while you sleep and hand you trending content ideas while you drink your coffee', color: logoColors[4] },
-  { icon: 'cart', text: 'Order grocery deliveries you need based on a photo of your fridge', color: logoColors[0] },
-  { icon: 'home', text: 'Control your air purifiers, home lighting system, and smart appliances', color: logoColors[1] },
-  { icon: 'brief', text: 'Text you a brief every day at 6am on current events you care about', color: logoColors[6] },
-  { icon: 'moon', text: 'Do boring admin while you sleep so you wake up to “already handled”', color: logoColors[5] },
-  { icon: 'mail', text: 'Unsubscribe from junk mail and draft work email replies', color: logoColors[3] }
+  { icon: 'brain', text: 'Save your 1:07am genius ideas and bring them back when needed', color: logoColors[2] },
+  { icon: 'spark', text: 'Find trending content ideas overnight for your morning coffee', color: logoColors[4] },
+  { icon: 'cart', text: 'Order groceries from a quick photo of your fridge', color: logoColors[0] },
+  { icon: 'home', text: 'Control your lights, purifiers, and smart home setup', color: logoColors[1] },
+  { icon: 'brief', text: 'Text you a 6am brief on news you actually care about', color: logoColors[6] },
+  { icon: 'moon', text: 'Handle boring admin while you sleep', color: logoColors[5] },
+  { icon: 'mail', text: 'Unsubscribe junk mail and draft clean work replies', color: logoColors[3] }
 ];
 
 export const metadata = {
@@ -63,7 +63,7 @@ function ScrollingCapabilities() {
 
   return (
     <div style={{ overflow: 'hidden', border: '1px solid #eadfd1', borderRadius: 16, background: '#fff', boxShadow: '0 8px 20px rgba(77,46,34,0.03)' }}>
-      <div style={{ display: 'flex', gap: 14, width: 'max-content', padding: '14px 10px', animation: 'scrollLeft 40s linear infinite' }}>
+      <div style={{ display: 'flex', gap: 14, width: 'max-content', padding: '14px 10px', animation: 'scrollLeft 42s linear infinite' }}>
         {repeated.map((item, idx) => (
           <div key={`${item.text}-${idx}`} style={{ minWidth: 320, maxWidth: 320, border: '1px solid #f0e5d8', background: '#fffaf3', borderRadius: 12, padding: '14px', display: 'grid', gap: 8 }}>
             <LineIcon type={item.icon} color={item.color} />
@@ -104,16 +104,16 @@ export default function PrivateDraftLandingPage() {
             </p>
 
             <p style={{ margin: '16px 0 0', color: '#8c8178', fontSize: 16, lineHeight: 1.55 }}>
-              We’ve done the hard part — sitting through way too many tech bros explaining OpenClaw on YouTube and testing hundreds of setups. This guide distills our learnings into the simplest way to build your own AI assistant using just your computer.
+              We’re building Opal (beta), with more guides and drops coming soon.
               <br />
-              Opal AI was created by a girl and her AI, Opal! Their wish is to see everyone who is stressed out, overwhelmed, and frazzled get their own AI agent by their side. All sales from the starter PDF will go towards the Opal AI team trying out more models, trying new softwares, and creating more guides to level up your AI agent.
+              Grab a limited copy of our Starter PDF to get your agent running.
             </p>
           </div>
         </section>
 
         <section style={{ marginBottom: 52 }}>
           <p className={editorial.className} style={{ margin: '0 0 14px', fontSize: 34, color: '#6b2e1e', lineHeight: 1.05 }}>
-            Here’s what you can do with your AI assistant
+            Here’s what you can do with your AI assistant:
           </p>
           <ScrollingCapabilities />
         </section>
@@ -145,6 +145,22 @@ export default function PrivateDraftLandingPage() {
               </div>
             </div>
           </article>
+        </section>
+
+        <section
+          style={{
+            marginTop: 16,
+            background: '#fffaf3',
+            border: '1px solid #e9dece',
+            borderRadius: 16,
+            padding: '16px 18px'
+          }}
+        >
+          <p style={{ margin: 0, color: '#5b4d44', fontSize: 15, lineHeight: 1.5 }}>
+            We’ve done the hard part — sitting through way too many tech bros explaining OpenClaw on YouTube and testing hundreds of setups. This guide distills our learnings into the simplest way to build your own AI assistant using just your computer.
+            <br />
+            Opal AI was created by a girl and her AI, Opal! Their wish is to see everyone who is stressed out, overwhelmed, and frazzled get their own AI agent by their side. All sales from the starter PDF will go towards the Opal AI team trying out more models, trying new softwares, and creating more guides to level up your AI agent.
+          </p>
         </section>
       </div>
     </main>
