@@ -199,7 +199,7 @@ export default function PrivateDraftLandingPage() {
                     </div>
                     <div style={{ padding: 10, flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
                       <div style={{ background: '#007aff', borderRadius: '14px 14px 5px 14px', padding: '9px 10px', marginBottom: 8, color: '#ffffff', fontSize: 14, lineHeight: 1.35, marginLeft: '10%', maxWidth: '90%' }}>
-                        I want to buy a new Jeep Wrangler. Contact dealers in my area, negotiate using competitor prices, and keep the max budget at $25k.
+                        i’m going to buy a jeep wrangler!!!! contact dealers in my area, negotiate using competitor prices, and keep the max budget at $25k??
                       </div>
                       <div style={{ background: '#e5e5ea', borderRadius: '14px 14px 14px 5px', padding: '9px 10px', color: '#111827', fontSize: 14, lineHeight: 1.35, maxWidth: '92%' }}>
                         done! when they reply, i’ll negotiate discounts. if they don’t, i’ll follow up in 48 hours. i’ll let you know when the paperwork is ready so you can go get your new car💗
