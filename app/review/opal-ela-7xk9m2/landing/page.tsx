@@ -12,14 +12,13 @@ const outcomes = [
 ];
 
 const marqueeItems = [
-  { icon: '📧', text: 'Unsubscribe from junk mail you hate & draft perfect replies to your scary boss before you wake up' },
-  { icon: '🛒', text: 'Build your grocery list from your week + remind you before you run out of oat milk' },
-  { icon: '🌙', text: 'Do your boring admin while you sleep so you wake up to “already handled”' },
-  { icon: '📱', text: 'Stalk your niche (politely) and hand you content ideas that actually sound like you' },
-  { icon: '🧠', text: 'Remember random genius ideas you drop at 1:07am and resurface them when needed' },
-  { icon: '📅', text: 'Give you a no-BS morning plan so you stop doomscrolling and start moving' },
-  { icon: '🧾', text: 'Turn messy meeting notes into clear action steps with owners and deadlines' },
-  { icon: '✈️', text: 'Compare flight options and prep a trip shortlist before your coffee is ready' }
+  { icon: '🧠', text: 'Remember genius ideas you drop at 1:07am and resurface them when needed' },
+  { icon: '📱', text: 'Doomscroll while you sleep and hand you trending content ideas while you drink your coffee' },
+  { icon: '🛒', text: 'Order grocery deliveries you need based on a photo of your fridge' },
+  { icon: '🏠', text: 'Control your air purifiers, home lighting system, and smart appliances' },
+  { icon: '🗞️', text: 'Text you a brief every day at 6am on current events you care about' },
+  { icon: '🌙', text: 'Do boring admin while you sleep so you wake up to “already handled”' },
+  { icon: '📧', text: 'Unsubscribe from junk mail and draft work email replies' }
 ];
 
 export const metadata = {
