@@ -225,9 +225,13 @@ export default function PrivateDraftLandingPage() {
           }}
         >
           <p style={{ margin: 0, color: '#5b4d44', fontSize: 15, lineHeight: 1.5 }}>
-            We’ve done the hard part — sitting through way too many tech bros explaining OpenClaw on YouTube and testing hundreds of setups. This guide distills our learnings into the simplest way to build your own AI assistant using just your computer.
-            <br />
-            Opal AI was created by a girl and her AI, Opal! Their wish is to see everyone who is stressed out, overwhelmed, and frazzled get their own AI agent by their side. All sales from the starter PDF will go towards the Opal AI team trying out more models, trying new softwares, and creating more guides to level up your AI agent.
+            We’ve done the hard part: sitting through way too many tech bros explaining OpenClaw on YouTube and testing hundreds of setups. This guide distills everything into the simplest way to build your own AI assistant using just your computer.
+          </p>
+          <p style={{ margin: '12px 0 0', color: '#5b4d44', fontSize: 15, lineHeight: 1.5 }}>
+            Opal AI was created by one tech-loving gal and her AI assistant, Opal. The goal is simple: help anyone feeling stressed, overwhelmed, or frazzled have an AI agent like Opal by their side.
+          </p>
+          <p style={{ margin: '12px 0 0', color: '#5b4d44', fontSize: 15, lineHeight: 1.5 }}>
+            All proceeds from this starter PDF go toward testing new models, exploring better tools, and creating more guides to help you level up your AI assistant.
           </p>
         </section>
       </div>
