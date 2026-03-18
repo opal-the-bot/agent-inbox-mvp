@@ -130,15 +130,15 @@ export default function PrivateDraftLandingPage() {
               <article style={{ background: '#fff', border: '1px solid #e5e7eb', borderRadius: 14, padding: 12 }}>
                 <p style={{ margin: '0 0 8px', fontWeight: 800, color: '#111827', fontSize: 15 }}>Telegram</p>
                 <div style={{ background: '#0f172a', borderRadius: 32, padding: 10 }}>
-                  <div style={{ borderRadius: 26, background: '#d5e8f7', overflow: 'hidden', height: 420, display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ borderRadius: 26, background: '#d5e8f7', overflow: 'hidden', height: 480, display: 'flex', flexDirection: 'column' }}>
                     <div style={{ height: 26, background: '#ffffff', borderBottom: '1px solid #e5e7eb', display: 'grid', placeItems: 'center', fontSize: 12, color: '#111827', fontWeight: 600 }}>
                       Opal
                     </div>
-                    <div style={{ padding: 10, background: 'linear-gradient(135deg, #f7e2d2 0%, #efe8d5 46%, #ead9df 100%)', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+                    <div style={{ padding: 10, background: 'linear-gradient(135deg, #f7e2d2 0%, #efe8d5 46%, #ead9df 100%)', flex: 1, display: 'flex', flexDirection: 'column' }}>
                       <div style={{ background: '#dff6d1', borderRadius: '12px 12px 4px 12px', padding: '9px 10px', marginBottom: 8, color: '#111827', fontSize: 14, lineHeight: 1.35, marginLeft: '8%', maxWidth: '92%' }}>
                         I’m at Target right now. What have I needed in the past month that I can get here?
                       </div>
-                      <div style={{ background: '#ffffff', borderRadius: '12px 12px 12px 4px', padding: '9px 10px', color: '#111827', fontSize: 14, lineHeight: 1.35, maxWidth: '92%' }}>
+                      <div style={{ background: '#ffffff', borderRadius: '12px 12px 12px 4px', padding: '9px 10px', color: '#111827', fontSize: 14, lineHeight: 1.35, maxWidth: '92%', marginBottom: 26 }}>
                         Got you: oat milk, dish pods, markers, hand towels, and your protein bars — and I know you’re on a diet, but you did say you were craving ice cream, so maybe Halo Top low-cal froyo instead?
                       </div>
                     </div>
@@ -153,7 +153,7 @@ export default function PrivateDraftLandingPage() {
               <article style={{ background: '#fff', border: '1px solid #e5e7eb', borderRadius: 14, padding: 12 }}>
                 <p style={{ margin: '0 0 8px', fontWeight: 800, color: '#111827', fontSize: 15 }}>WhatsApp</p>
                 <div style={{ background: '#0f172a', borderRadius: 32, padding: 10 }}>
-                  <div style={{ borderRadius: 26, background: '#efeae2', overflow: 'hidden', height: 420, display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ borderRadius: 26, background: '#efeae2', overflow: 'hidden', height: 480, display: 'flex', flexDirection: 'column' }}>
                     <div style={{ height: 26, background: '#075e54', display: 'grid', placeItems: 'center', fontSize: 12, color: '#ffffff', fontWeight: 600 }}>
                       Opal
                     </div>
@@ -166,11 +166,10 @@ export default function PrivateDraftLandingPage() {
                         backgroundSize: '42px 42px',
                         flex: 1,
                         display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'flex-end'
+                        flexDirection: 'column'
                       }}
                     >
-                      <div style={{ background: '#dcf8c6', borderRadius: '12px 12px 4px 12px', padding: '9px 10px', color: '#111827', fontSize: 14, lineHeight: 1.35, marginLeft: '6%', maxWidth: '94%' }}>
+                      <div style={{ background: '#dcf8c6', borderRadius: '12px 12px 4px 12px', padding: '9px 10px', color: '#111827', fontSize: 13, lineHeight: 1.35, marginLeft: '6%', maxWidth: '94%', marginBottom: 22 }}>
                         Good morning, Selina! Your work inbox has two messages from Josh about product design updates waiting for your review. Drafted replies are ready, and all junk has been cleared.
                         <br /><br />
                         Current events for today:
@@ -194,13 +193,13 @@ export default function PrivateDraftLandingPage() {
               <article style={{ background: '#fff', border: '1px solid #e5e7eb', borderRadius: 14, padding: 12 }}>
                 <p style={{ margin: '0 0 8px', fontWeight: 800, color: '#111827', fontSize: 15 }}>iMessage</p>
                 <div style={{ background: '#0f172a', borderRadius: 32, padding: 10 }}>
-                  <div style={{ borderRadius: 26, background: '#f2f2f7', overflow: 'hidden', height: 420, display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ borderRadius: 26, background: '#f2f2f7', overflow: 'hidden', height: 480, display: 'flex', flexDirection: 'column' }}>
                     <div style={{ height: 26, background: '#ffffff', borderBottom: '1px solid #e5e7eb', display: 'grid', placeItems: 'center', fontSize: 12, color: '#111827', fontWeight: 600 }}>
                       Opal
                     </div>
                     <div style={{ padding: 10, flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
                       <div style={{ background: '#007aff', borderRadius: '14px 14px 5px 14px', padding: '9px 10px', marginBottom: 8, color: '#ffffff', fontSize: 14, lineHeight: 1.35, marginLeft: '10%', maxWidth: '90%' }}>
-                        I want to buy a new Jeep. Contact dealers in my area, negotiate using competitor prices, and keep the max budget at $25k.
+                        I want to buy a new Jeep Wrangler. Contact dealers in my area, negotiate using competitor prices, and keep the max budget at $25k.
                       </div>
                       <div style={{ background: '#e5e5ea', borderRadius: '14px 14px 14px 5px', padding: '9px 10px', color: '#111827', fontSize: 14, lineHeight: 1.35, maxWidth: '92%' }}>
                         done! when they reply, i’ll negotiate discounts. if they don’t, i’ll follow up in 48 hours. i’ll let you know when the paperwork is ready so you can go get your new car💗
