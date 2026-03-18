@@ -101,6 +101,8 @@ export default function PrivateDraftLandingPage() {
 
             <p style={{ margin: '16px 0 0', color: '#5f534b', fontSize: 24, lineHeight: 1.45 }}>
               <strong>No coding required.</strong> <strong>No AI experience required.</strong>
+              <br />
+              Affordable and fully customizable to you, unlike expensive AI software that boxes you in.
             </p>
 
             <p style={{ margin: '16px 0 0', color: '#5f534b', fontSize: 24, lineHeight: 1.45, fontWeight: 600 }}>
