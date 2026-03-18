@@ -1,8 +1,21 @@
+import { Cormorant_Garamond } from 'next/font/google';
+
+const editorial = Cormorant_Garamond({ subsets: ['latin'], weight: ['500', '600', '700'] });
+
 const bullets = [
   'A beginner-friendly walkthrough for setting up your own Telegram AI assistant',
   'Copy/paste prompts for daily planning, reminders, and momentum',
   'A tiny CEO ritual: morning priorities + 2am nightly review',
   'Troubleshooting guide so you don’t get stuck on setup'
+];
+
+const logoLetters = [
+  { ch: 'O', bg: '#efc8b3' },
+  { ch: 'P', bg: '#c6c3ad' },
+  { ch: 'A', bg: '#a8efbf' },
+  { ch: 'L', bg: '#bfd0e7' },
+  { ch: 'A', bg: '#8eb8e8' },
+  { ch: 'I', bg: '#f0b6c1' }
 ];
 
 export const metadata = {
@@ -11,12 +24,38 @@ export const metadata = {
 
 export default function GirliesPrivateDraftPage() {
   return (
-    <main style={{ minHeight: '100vh', background: '#f8f4ee', color: '#171717', padding: '48px 20px 72px' }}>
+    <main style={{ minHeight: '100vh', background: '#eeede2', color: '#171717', padding: '48px 20px 72px' }}>
       <div style={{ maxWidth: 860, margin: '0 auto' }}>
-        <p style={{ margin: 0, letterSpacing: 1.4, textTransform: 'uppercase', fontSize: 12, color: '#7a5b61' }}>
-          Private review draft v1
-        </p>
-        <h1 style={{ fontSize: 'clamp(34px, 7vw, 62px)', lineHeight: 1.05, margin: '12px 0 14px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap', marginBottom: 22 }}>
+          {logoLetters.map((l, i) => (
+            <div
+              key={`${l.ch}-${i}`}
+              className={editorial.className}
+              style={{
+                width: 44,
+                height: 44,
+                borderRadius: '50%',
+                background: l.bg,
+                display: 'grid',
+                placeItems: 'center',
+                color: '#6b2e1e',
+                fontSize: 27,
+                lineHeight: 1
+              }}
+            >
+              {l.ch}
+            </div>
+          ))}
+          <span
+            className={editorial.className}
+            style={{ marginLeft: 6, color: '#6b2e1e', fontSize: 34, letterSpacing: 0.4, fontWeight: 600 }}
+          >
+            Opal AI
+          </span>
+        </div>
+
+        <p style={{ margin: 0, letterSpacing: 1.4, textTransform: 'uppercase', fontSize: 12, color: '#7a5b61' }}>Private review draft v1</p>
+        <h1 className={editorial.className} style={{ fontSize: 'clamp(44px, 8vw, 82px)', lineHeight: 1.03, margin: '12px 0 14px', color: '#6b2e1e', fontWeight: 500 }}>
           everyone has an AI agent now… getting FOMO?
         </h1>
         <p style={{ fontSize: 20, maxWidth: 700, marginTop: 0 }}>
