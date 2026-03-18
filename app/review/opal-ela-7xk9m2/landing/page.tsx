@@ -169,7 +169,7 @@ export default function PrivateDraftLandingPage() {
                         flexDirection: 'column'
                       }}
                     >
-                      <div style={{ background: '#e5e5ea', borderRadius: '12px 12px 12px 4px', padding: '9px 10px', color: '#111827', fontSize: 13, lineHeight: 1.35, maxWidth: '94%', marginBottom: 22 }}>
+                      <div style={{ background: '#ffffff', borderRadius: '12px 12px 12px 4px', padding: '9px 10px', color: '#111827', fontSize: 15, lineHeight: 1.4, maxWidth: '94%', marginBottom: 22 }}>
                         Good morning, Selina! Your work inbox has two messages from Josh about product design updates waiting for your review. Drafted replies are ready, and all junk has been cleared.
                         <br /><br />
                         Current events for today:
