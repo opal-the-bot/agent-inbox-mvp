@@ -200,7 +200,7 @@ export default function PrivateDraftLandingPage() {
                     </div>
                     <div style={{ padding: 10, flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
                       <div style={{ background: '#007aff', borderRadius: '14px 14px 5px 14px', padding: '9px 10px', marginBottom: 8, color: '#ffffff', fontSize: 14, lineHeight: 1.35, marginLeft: '10%', maxWidth: '90%' }}>
-                        I want to buy a new car. Contact dealers in my area, negotiate using competitor prices, and keep the max budget at $25k.
+                        I want to buy a new Jeep. Contact dealers in my area, negotiate using competitor prices, and keep the max budget at $25k.
                       </div>
                       <div style={{ background: '#e5e5ea', borderRadius: '14px 14px 14px 5px', padding: '9px 10px', color: '#111827', fontSize: 14, lineHeight: 1.35, maxWidth: '92%' }}>
                         Done! When they reply, I’ll negotiate discounts. If they don’t, I’ll follow up in 48 hours. I’ll let you know when the paperwork is ready so you can go get your new car✨
