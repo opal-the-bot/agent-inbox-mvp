@@ -100,11 +100,11 @@ export default function PrivateDraftLandingPage() {
             boxShadow: '0 10px 30px rgba(77,46,34,0.05)'
           }}
         >
-          <h1 className={editorial.className} style={{ fontSize: 'clamp(42px, 7.2vw, 78px)', lineHeight: 1.02, margin: '0 0 12px', color: '#6b2e1e', fontWeight: 500 }}>
-            Launch an AI Assistant That Actually Helps
+          <h1 className={editorial.className} style={{ fontSize: 'clamp(34px, 5.8vw, 58px)', lineHeight: 1.08, margin: '0 0 14px', color: '#6b2e1e', fontWeight: 500, maxWidth: 900 }}>
+            Give them a fish, feed them for a day. Teach them to fish, feed them for a lifetime.
           </h1>
-          <p style={{ fontSize: 20, maxWidth: 800, margin: 0, color: '#4e423b' }}>
-            One beginner-friendly PDF that shows you how to set up your assistant, improve memory, and build a practical workflow for real life and business.
+          <p style={{ fontSize: 20, maxWidth: 900, margin: 0, color: '#4e423b' }}>
+            Everything you need to learn to create your own AI agent, simplified and ELI5-ed. You’ll have the power to make yours fully customized to you — no more paying for expensive wrappers that don’t work.
           </p>
         </section>
 
