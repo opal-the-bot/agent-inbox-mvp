@@ -104,7 +104,7 @@ export default function PrivateDraftLandingPage() {
           <div style={{ marginTop: 10 }}>
             <LogoSelectedC />
           </div>
-          <p style={{ margin: '10px 0 0', color: '#6b5a4f', fontSize: 13, lineHeight: 1.45, maxWidth: 900 }}>
+          <p style={{ margin: '10px 0 0', color: '#6b5a4f', fontSize: 15, lineHeight: 1.45, maxWidth: 900 }}>
             Give them a fish, feed them for a day. Teach them to fish, feed them for a lifetime.
           </p>
         </header>
