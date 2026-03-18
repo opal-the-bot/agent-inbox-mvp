@@ -118,12 +118,17 @@ export default function PrivateDraftLandingPage() {
             boxShadow: '0 10px 30px rgba(77,46,34,0.05)'
           }}
         >
-          <h1 className={editorial.className} style={{ fontSize: 'clamp(28px, 3.7vw, 42px)', lineHeight: 1.15, margin: '0 0 12px', color: '#6b2e1e', fontWeight: 500, maxWidth: 920 }}>
-            Everything you need to learn to create your own AI agent, simplified and ELI5-ed. You’ll have the power to make yours fully customized to you — no more paying for expensive wrappers that don’t work.
-          </h1>
+          <div style={{ borderBottom: '1px solid #eadfd1', paddingBottom: 12, marginBottom: 14 }}>
+            <h1 className={editorial.className} style={{ fontSize: 'clamp(28px, 3.7vw, 42px)', lineHeight: 1.15, margin: '0 0 8px', color: '#6b2e1e', fontWeight: 500, maxWidth: 920 }}>
+              everything you need to build your own AI agent: condensed, ELI5-ed, and made to be done as inexpensively as possible.
+            </h1>
+            <p style={{ margin: 0, color: '#6b5a4f', fontSize: 14, lineHeight: 1.45, maxWidth: 860 }}>
+              We’re actively building out Opal (beta), with more guides and learning drops coming soon. This starter PDF is the first one live now.
+            </p>
+          </div>
 
-          <p className={editorial.className} style={{ margin: '12px 0 12px', fontSize: 33, color: '#6b2e1e', lineHeight: 1.05 }}>
-            Here’s What You Can Do with Your AI Assistant
+          <p className={editorial.className} style={{ margin: '10px 0 12px', fontSize: 33, color: '#6b2e1e', lineHeight: 1.05 }}>
+            Here’s what you can do with your AI assistant
           </p>
 
           <ScrollingCapabilities />
@@ -169,7 +174,7 @@ export default function PrivateDraftLandingPage() {
               </div>
 
               <div style={{ minWidth: 190, display: 'grid', gap: 10, justifyItems: 'start' }}>
-                <strong style={{ fontSize: 36, color: '#5a2e21', lineHeight: 1 }}>$1</strong>
+                <strong style={{ fontSize: 36, color: '#5a2e21', lineHeight: 1 }}>$10</strong>
                 <button
                   style={{
                     border: 0,
