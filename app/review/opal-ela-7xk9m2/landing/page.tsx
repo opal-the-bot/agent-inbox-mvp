@@ -2,7 +2,8 @@ import { Cormorant_Garamond } from 'next/font/google';
 
 const editorial = Cormorant_Garamond({ subsets: ['latin'], weight: ['500', '600', '700'] });
 
-const letterColors = ['#dea88b', '#aca88b', '#84c99a', '#97aec9', '#6d9ad0', '#d68f9d', '#dfb477'];
+const logoColors = ['#dea88b', '#aca88b', '#84c99a', '#97aec9', '#6d9ad0', '#d68f9d', '#dfb477'];
+const teachColor = '#6b5a4f';
 
 const outcomes = [
   'Set up your AI agent securely without risky defaults',
@@ -12,13 +13,13 @@ const outcomes = [
 ];
 
 const marqueeItems = [
-  { icon: '🧠', text: 'Remember genius ideas you drop at 1:07am and resurface them when needed' },
-  { icon: '📱', text: 'Doomscroll while you sleep and hand you trending content ideas while you drink your coffee' },
-  { icon: '🛒', text: 'Order grocery deliveries you need based on a photo of your fridge' },
-  { icon: '🏠', text: 'Control your air purifiers, home lighting system, and smart appliances' },
-  { icon: '🗞️', text: 'Text you a brief every day at 6am on current events you care about' },
-  { icon: '🌙', text: 'Do boring admin while you sleep so you wake up to “already handled”' },
-  { icon: '📧', text: 'Unsubscribe from junk mail and draft work email replies' }
+  { icon: 'brain', text: 'Remember genius ideas you drop at 1:07am and resurface them when needed', color: logoColors[2] },
+  { icon: 'spark', text: 'Doomscroll while you sleep and hand you trending content ideas while you drink your coffee', color: logoColors[4] },
+  { icon: 'cart', text: 'Order grocery deliveries you need based on a photo of your fridge', color: logoColors[0] },
+  { icon: 'home', text: 'Control your air purifiers, home lighting system, and smart appliances', color: logoColors[1] },
+  { icon: 'brief', text: 'Text you a brief every day at 6am on current events you care about', color: logoColors[6] },
+  { icon: 'moon', text: 'Do boring admin while you sleep so you wake up to “already handled”', color: logoColors[5] },
+  { icon: 'mail', text: 'Unsubscribe from junk mail and draft work email replies', color: logoColors[3] }
 ];
 
 export const metadata = {
@@ -33,7 +34,7 @@ function LogoSelectedC() {
         ch === ' ' ? (
           <span key={`s-${i}`} style={{ marginRight: '0.14em' }} />
         ) : (
-          <span key={`${ch}-${i}`} style={{ color: letterColors[i] }}>
+          <span key={`${ch}-${i}`} style={{ color: logoColors[i] }}>
             {ch}
           </span>
         )
@@ -42,44 +43,31 @@ function LogoSelectedC() {
   );
 }
 
+function LineIcon({ type, color }: { type: string; color: string }) {
+  const base = { width: 18, height: 18, viewBox: '0 0 24 24', fill: 'none', stroke: '#6b2e1e', strokeWidth: 1.8, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const };
+  return (
+    <div style={{ width: 36, height: 36, borderRadius: 10, background: color, display: 'grid', placeItems: 'center' }}>
+      {type === 'mail' && <svg {...base}><rect x='3' y='5' width='18' height='14' rx='2'/><path d='m3 7 9 6 9-6'/></svg>}
+      {type === 'cart' && <svg {...base}><circle cx='9' cy='20' r='1.6'/><circle cx='18' cy='20' r='1.6'/><path d='M3 4h2l2.2 11H19l2-8H7.3'/></svg>}
+      {type === 'moon' && <svg {...base}><path d='M21 12.5A8.5 8.5 0 1 1 11.5 3a7 7 0 0 0 9.5 9.5z'/></svg>}
+      {type === 'home' && <svg {...base}><path d='m3 10 9-7 9 7'/><path d='M5 10v10h14V10'/></svg>}
+      {type === 'brief' && <svg {...base}><rect x='3' y='6' width='18' height='13' rx='2'/><path d='M9 6V4h6v2'/></svg>}
+      {type === 'brain' && <svg {...base}><path d='M9 8a3 3 0 0 1 6 0 3 3 0 1 1 2 5v1a3 3 0 0 1-3 3H10a3 3 0 0 1-3-3v-1a3 3 0 1 1 2-5z'/></svg>}
+      {type === 'spark' && <svg {...base}><path d='m12 3 1.8 4.4L18 9.2l-4.2 1.8L12 15l-1.8-4L6 9.2l4.2-1.8z'/></svg>}
+    </div>
+  );
+}
+
 function ScrollingCapabilities() {
   const repeated = [...marqueeItems, ...marqueeItems];
 
   return (
-    <div
-      style={{
-        overflow: 'hidden',
-        border: '1px solid #eadfd1',
-        borderRadius: 16,
-        background: '#fff',
-        boxShadow: '0 8px 20px rgba(77,46,34,0.03)'
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          gap: 12,
-          width: 'max-content',
-          padding: '12px 10px',
-          animation: 'scrollLeft 34s linear infinite'
-        }}
-      >
+    <div style={{ overflow: 'hidden', border: '1px solid #eadfd1', borderRadius: 16, background: '#fff', boxShadow: '0 8px 20px rgba(77,46,34,0.03)' }}>
+      <div style={{ display: 'flex', gap: 14, width: 'max-content', padding: '14px 10px', animation: 'scrollLeft 40s linear infinite' }}>
         {repeated.map((item, idx) => (
-          <div
-            key={`${item.text}-${idx}`}
-            style={{
-              minWidth: 260,
-              maxWidth: 260,
-              border: '1px solid #f0e5d8',
-              background: '#fffaf3',
-              borderRadius: 12,
-              padding: '12px 12px 10px',
-              display: 'grid',
-              gap: 6
-            }}
-          >
-            <div style={{ fontSize: 22 }}>{item.icon}</div>
-            <p style={{ margin: 0, color: '#4f433c', fontSize: 14, lineHeight: 1.35 }}>{item.text}</p>
+          <div key={`${item.text}-${idx}`} style={{ minWidth: 320, maxWidth: 320, border: '1px solid #f0e5d8', background: '#fffaf3', borderRadius: 12, padding: '14px', display: 'grid', gap: 8 }}>
+            <LineIcon type={item.icon} color={item.color} />
+            <p style={{ margin: 0, color: teachColor, fontSize: 17, lineHeight: 1.38 }}>{item.text}</p>
           </div>
         ))}
       </div>
@@ -89,80 +77,56 @@ function ScrollingCapabilities() {
 
 export default function PrivateDraftLandingPage() {
   return (
-    <main style={{ minHeight: '100vh', background: '#f4f0e8', color: '#2a211d', padding: '38px 20px 84px' }}>
-      <style>{`
-        @keyframes scrollLeft {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-      `}</style>
+    <main style={{ minHeight: '100vh', background: '#f4f0e8', color: '#2a211d', padding: '42px 20px 90px' }}>
+      <style>{`@keyframes scrollLeft {0% { transform: translateX(0); } 100% { transform: translateX(-50%); }}`}</style>
 
       <div style={{ maxWidth: 980, margin: '0 auto' }}>
-        <header style={{ marginBottom: 24 }}>
-          <p style={{ margin: 0, letterSpacing: 1.4, textTransform: 'uppercase', fontSize: 12, color: '#8a786c' }}>Private Review Draft v7</p>
+        <header style={{ marginBottom: 44 }}>
+          <p style={{ margin: 0, letterSpacing: 1.4, textTransform: 'uppercase', fontSize: 12, color: '#8a786c' }}>Private Review Draft v8</p>
           <div style={{ marginTop: 10 }}>
             <LogoSelectedC />
           </div>
-          <p style={{ margin: '10px 0 0', color: '#6b5a4f', fontSize: 15, lineHeight: 1.45, maxWidth: 900 }}>
+          <p style={{ margin: '10px 0 0', color: teachColor, fontSize: 15, lineHeight: 1.45, maxWidth: 900 }}>
             Give them a fish, feed them for a day. Teach them to fish, feed them for a lifetime.
           </p>
         </header>
 
-        <section
-          style={{
-            background: '#fffaf3',
-            border: '1px solid #e9dece',
-            borderRadius: 22,
-            padding: '28px 24px',
-            boxShadow: '0 10px 30px rgba(77,46,34,0.05)'
-          }}
-        >
-          <div style={{ borderBottom: '1px solid #eadfd1', paddingBottom: 12, marginBottom: 14 }}>
-            <h1 className={editorial.className} style={{ fontSize: 'clamp(28px, 3.7vw, 42px)', lineHeight: 1.15, margin: '0 0 8px', color: '#6b2e1e', fontWeight: 500, maxWidth: 920 }}>
-              everything you need to build your own AI agent: condensed, ELI5-ed, and made to be done as inexpensively as possible.
+        <section style={{ background: '#fffaf3', border: '1px solid #e9dece', borderRadius: 22, padding: '36px 28px', boxShadow: '0 10px 30px rgba(77,46,34,0.05)', marginBottom: 50 }}>
+          <div style={{ maxWidth: 700 }}>
+            <h1 className={editorial.className} style={{ fontSize: 'clamp(56px, 8vw, 72px)', lineHeight: 1.1, margin: 0, color: '#6b2e1e', fontWeight: 500 }}>
+              Build your own AI agent
             </h1>
-            <p style={{ margin: 0, color: '#6b5a4f', fontSize: 14, lineHeight: 1.45, maxWidth: 860 }}>
-              We’re actively building out Opal (beta), with more guides and learning drops coming soon. This starter PDF is the first one live now.
+
+            <p style={{ margin: '16px 0 0', color: '#5f534b', fontSize: 24, lineHeight: 1.45 }}>
+              <strong>Simple.</strong> <strong>Affordable.</strong> Fully <strong>customizable.</strong>
+              <br />
+              No expensive tools. No unnecessary complexity.
+            </p>
+
+            <p style={{ margin: '16px 0 0', color: '#8c8178', fontSize: 16, lineHeight: 1.55 }}>
+              We’re building Opal (beta), with more guides and drops coming soon.
+              <br />
+              Grab a limited copy of our Starter PDF to get your agent running.
             </p>
           </div>
+        </section>
 
-          <p className={editorial.className} style={{ margin: '10px 0 12px', fontSize: 33, color: '#6b2e1e', lineHeight: 1.05 }}>
+        <section style={{ marginBottom: 52 }}>
+          <p className={editorial.className} style={{ margin: '0 0 14px', fontSize: 34, color: '#6b2e1e', lineHeight: 1.05 }}>
             Here’s what you can do with your AI assistant
           </p>
-
           <ScrollingCapabilities />
         </section>
 
-        <section style={{ marginTop: 24 }}>
-          <article
-            style={{
-              background: '#fff',
-              border: '1px solid #eadfd1',
-              borderRadius: 20,
-              padding: 22,
-              boxShadow: '0 8px 24px rgba(77,46,34,0.04)'
-            }}
-          >
-            <div
-              style={{
-                borderRadius: 14,
-                background: 'linear-gradient(135deg, #f7e2d2 0%, #efe8d5 46%, #ead9df 100%)',
-                height: 180,
-                marginBottom: 18,
-                display: 'grid',
-                placeItems: 'center',
-                color: '#6b2e1e',
-                fontSize: 13,
-                letterSpacing: 1,
-                textTransform: 'uppercase'
-              }}
-            >
+        <section style={{ marginBottom: 18 }}>
+          <article style={{ background: '#fff', border: '1px solid #eadfd1', borderRadius: 20, padding: 24, boxShadow: '0 8px 24px rgba(77,46,34,0.04)' }}>
+            <div style={{ borderRadius: 14, background: 'linear-gradient(135deg, #f7e2d2 0%, #efe8d5 46%, #ead9df 100%)', height: 180, marginBottom: 18, display: 'grid', placeItems: 'center', color: '#6b2e1e', fontSize: 13, letterSpacing: 1, textTransform: 'uppercase' }}>
               PDF Cover Placeholder
             </div>
 
             <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap', alignItems: 'flex-start', justifyContent: 'space-between' }}>
               <div style={{ flex: '1 1 560px', minWidth: 280 }}>
-                <h2 className={editorial.className} style={{ fontSize: 42, lineHeight: 1.04, margin: '0 0 10px', color: '#6b2e1e', fontWeight: 600 }}>
+                <h2 className={editorial.className} style={{ fontSize: 42, lineHeight: 1.08, margin: '0 0 10px', color: '#6b2e1e', fontWeight: 600 }}>
                   Your Complete AI Agent Starter Guide
                 </h2>
                 <ul style={{ margin: 0, paddingLeft: 20, display: 'grid', gap: 10, color: '#514740', fontSize: 16 }}>
@@ -174,39 +138,13 @@ export default function PrivateDraftLandingPage() {
 
               <div style={{ minWidth: 190, display: 'grid', gap: 10, justifyItems: 'start' }}>
                 <strong style={{ fontSize: 36, color: '#5a2e21', lineHeight: 1 }}>$10</strong>
-                <button
-                  style={{
-                    border: 0,
-                    borderRadius: 999,
-                    padding: '12px 18px',
-                    background: '#b76e79',
-                    color: '#fff',
-                    fontWeight: 700,
-                    cursor: 'pointer',
-                    fontSize: 15
-                  }}
-                >
+                <button style={{ border: 0, borderRadius: 999, padding: '12px 18px', background: '#b76e79', color: '#fff', fontWeight: 700, cursor: 'pointer', fontSize: 15 }}>
                   Add to Cart
                 </button>
-                <p style={{ margin: 0, fontSize: 13, color: '#7a6d65' }}>Instant PDF Delivery</p>
+                <p style={{ margin: 0, fontSize: 13, color: '#8c8178' }}>Instant PDF Delivery</p>
               </div>
             </div>
           </article>
-        </section>
-
-        <section
-          style={{
-            marginTop: 16,
-            background: '#fffaf3',
-            border: '1px solid #e9dece',
-            borderRadius: 16,
-            padding: '16px 18px'
-          }}
-        >
-          <p style={{ margin: 0, color: '#5b4d44', fontSize: 15, lineHeight: 1.5 }}>
-            We’ve done the hard part — sat through way too many tech bros explaining OpenClaw on YouTube, tested hundreds of setups,
-            and distilled it into the simplest way to build your own AI assistant using just your computer.
-          </p>
         </section>
       </div>
     </main>
