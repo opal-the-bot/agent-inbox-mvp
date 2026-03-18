@@ -134,7 +134,7 @@ export default function PrivateDraftLandingPage() {
                     <div style={{ height: 26, background: '#ffffff', borderBottom: '1px solid #e5e7eb', display: 'grid', placeItems: 'center', fontSize: 12, color: '#111827', fontWeight: 600 }}>
                       Opal
                     </div>
-                    <div style={{ padding: 10, background: 'linear-gradient(180deg, #a3d65c 0%, #2f6f2a 100%)' }}>
+                    <div style={{ padding: 10, background: 'linear-gradient(135deg, #f7e2d2 0%, #efe8d5 46%, #ead9df 100%)' }}>
                       <div style={{ background: '#dff6d1', borderRadius: '12px 12px 4px 12px', padding: '9px 10px', marginBottom: 8, color: '#111827', fontSize: 14, lineHeight: 1.35, marginLeft: '8%', maxWidth: '92%' }}>
                         I’m at Target right now. What have I needed in the past month that I can get here?
                       </div>
