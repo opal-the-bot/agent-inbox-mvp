@@ -132,11 +132,11 @@ export default function PrivateDraftLandingPage() {
                     <div style={{ height: 26, background: '#ffffff', borderBottom: '1px solid #e5e7eb', display: 'grid', placeItems: 'center', fontSize: 12, color: '#111827', fontWeight: 600 }}>
                       Opal
                     </div>
-                    <div style={{ padding: 10, background: 'linear-gradient(#d8ecf9,#cce5f7)' }}>
-                      <div style={{ background: '#ffffff', borderRadius: '12px 12px 12px 4px', padding: '9px 10px', marginBottom: 8, color: '#111827', fontSize: 14, lineHeight: 1.35, maxWidth: '92%' }}>
+                    <div style={{ padding: 10, background: 'linear-gradient(180deg, #a3d65c 0%, #2f6f2a 100%)' }}>
+                      <div style={{ background: '#dff6d1', borderRadius: '12px 12px 12px 4px', padding: '9px 10px', marginBottom: 8, color: '#111827', fontSize: 14, lineHeight: 1.35, maxWidth: '92%' }}>
                         I’m at Target right now. What have I needed in the past month that I can get here?
                       </div>
-                      <div style={{ background: '#d9fdd3', borderRadius: '12px 12px 4px 12px', padding: '9px 10px', color: '#111827', fontSize: 14, lineHeight: 1.35, marginLeft: '8%', maxWidth: '92%' }}>
+                      <div style={{ background: '#ffffff', borderRadius: '12px 12px 4px 12px', padding: '9px 10px', color: '#111827', fontSize: 14, lineHeight: 1.35, marginLeft: '8%', maxWidth: '92%' }}>
                         Got you: toilet paper, Greek yogurt, berries, oat milk, dish pods, and your protein bars.
                       </div>
                     </div>
@@ -183,10 +183,10 @@ export default function PrivateDraftLandingPage() {
                       Opal
                     </div>
                     <div style={{ padding: 10 }}>
-                      <div style={{ background: '#e5e5ea', borderRadius: '14px 14px 14px 5px', padding: '9px 10px', marginBottom: 8, color: '#111827', fontSize: 14, lineHeight: 1.35, maxWidth: '92%' }}>
+                      <div style={{ background: '#007aff', borderRadius: '14px 14px 5px 14px', padding: '9px 10px', marginBottom: 8, color: '#ffffff', fontSize: 14, lineHeight: 1.35, marginLeft: '10%', maxWidth: '90%' }}>
                         I want to buy a new car. Contact dealers in my area, negotiate using competitor prices, and keep the max budget at $25k.
                       </div>
-                      <div style={{ background: '#007aff', borderRadius: '14px 14px 5px 14px', padding: '9px 10px', color: '#ffffff', fontSize: 14, lineHeight: 1.35, marginLeft: '10%', maxWidth: '90%' }}>
+                      <div style={{ background: '#e5e5ea', borderRadius: '14px 14px 14px 5px', padding: '9px 10px', color: '#111827', fontSize: 14, lineHeight: 1.35, maxWidth: '92%' }}>
                         Done! When they reply, I’ll negotiate discounts. If they don’t, I’ll follow up in 48 hours. I’ll let you know when the paperwork is ready so you can go get your new car✨
                       </div>
                     </div>
