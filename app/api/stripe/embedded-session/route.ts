@@ -12,12 +12,12 @@ export async function POST(request: Request) {
 
   try {
     const stripe = new Stripe(secretKey);
-    const origin = new URL(request.url).origin;
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://use-opal.com';
 
     const session = await stripe.checkout.sessions.create({
       ui_mode: 'embedded',
       mode: 'payment',
-      return_url: `${origin}/review/opal-ela-7xk9m2/landing?checkout=success&session_id={CHECKOUT_SESSION_ID}`,
+      return_url: `${siteUrl}/review/opal-ela-7xk9m2/landing?checkout=success&session_id={CHECKOUT_SESSION_ID}`,
       line_items: [
         {
           quantity: 1,

@@ -1,6 +1,13 @@
 export const metadata = {
+  metadataBase: new URL('https://use-opal.com'),
   title: 'Agent Inbox MVP',
-  description: 'Coordinate AI agents and human approvals in one place.'
+  description: 'Coordinate AI agents and human approvals in one place.',
+  alternates: {
+    canonical: '/'
+  },
+  openGraph: {
+    url: 'https://use-opal.com'
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
