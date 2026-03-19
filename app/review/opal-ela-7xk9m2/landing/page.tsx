@@ -16,7 +16,7 @@ const outcomes = [
 
 const marqueeItems = [
   { icon: 'brain', text: 'Save your 1:07am genius ideas and bring them back when needed', color: logoColors[2] },
-  { icon: 'spark', text: 'Doomscroll overnight and make a list of trending content ideas before your morning coffee', color: logoColors[4] },
+  { icon: 'spark', text: 'Doomscroll while you sleep and give you trending content ideas over coffee', color: logoColors[4] },
   { icon: 'cart', text: 'Order groceries from a quick photo of your fridge', color: logoColors[0] },
   { icon: 'home', text: 'Control your lights, purifiers, and smart home setup', color: logoColors[1] },
   { icon: 'brief', text: 'Text you a 6am brief on news you actually care about', color: logoColors[6] },
