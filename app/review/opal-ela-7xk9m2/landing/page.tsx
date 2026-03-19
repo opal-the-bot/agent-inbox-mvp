@@ -264,7 +264,7 @@ export default function PrivateDraftLandingPage() {
             Opal AI was created by one tech-loving gal and her AI assistant, Opal. The goal is simple: help anyone feeling stressed, overwhelmed, or frazzled have an AI agent like Opal by their side.
           </p>
           <p style={{ margin: '12px 0 0', color: '#5b4d44', fontSize: 15, lineHeight: 1.5 }}>
-            All proceeds from this starter PDF go toward testing new models, exploring better tools, and creating more guides to help you level up your AI assistant.
+            All proceeds from this starter PDF go towards exploring better tools and creating more resources. Questions? Email use.opal.ai@gmail.com
           </p>
         </section>
       </div>
