@@ -6,6 +6,7 @@ const logoColors = ['#dea88b', '#aca88b', '#84c99a', '#97aec9', '#6d9ad0', '#d68
 const teachColor = '#6b5a4f';
 
 const outcomes = [
+  'Learn what AI agents are and how OpenClaw works',
   'Set up your AI agent with the right security measures to keep you and your computer safe',
   'Connect your AI agent to a server so it runs 24/7 — even while you’re sleeping',
   'Run multiple projects at once using Telegram topics and channels',
