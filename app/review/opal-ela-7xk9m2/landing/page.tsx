@@ -245,8 +245,6 @@ export default function PrivateDraftLandingPage() {
                 {paymentLink ? (
                   <a
                     href={paymentLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     style={{ border: 0, borderRadius: 999, padding: '12px 18px', background: '#b76e79', color: '#fff', fontWeight: 700, cursor: 'pointer', fontSize: 15, textDecoration: 'none' }}
                   >
                     Add to Cart
