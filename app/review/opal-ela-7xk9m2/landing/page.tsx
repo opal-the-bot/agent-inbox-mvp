@@ -9,6 +9,7 @@ const outcomes = [
   'Set up your AI agent with the right security measures to keep you and your computer safe',
   'Connect your AI agent to a server so it runs 24/7 — even while you’re sleeping',
   'Run multiple projects at once using Telegram topics and channels',
+  'Customize your agent’s memory so it reliably keeps track of what matters most',
   'Connect Gmail so your agent can help manage your inbox'
 ];
 
@@ -94,7 +95,7 @@ export default function PrivateDraftLandingPage() {
         </header>
 
         <section style={{ background: '#fffaf3', border: '1px solid #e9dece', borderRadius: 22, padding: '36px 28px', boxShadow: '0 10px 30px rgba(77,46,34,0.05)', marginBottom: 50 }}>
-          <div style={{ maxWidth: 700 }}>
+          <div style={{ maxWidth: 860 }}>
             <h1 className={editorial.className} style={{ fontSize: 'clamp(56px, 8vw, 72px)', lineHeight: 1.1, margin: 0, color: '#6b2e1e', fontWeight: 500 }}>
               Build your own AI agent
             </h1>
@@ -192,7 +193,7 @@ export default function PrivateDraftLandingPage() {
                     <div style={{ height: 26, background: '#ffffff', borderBottom: '1px solid #e5e7eb', display: 'grid', placeItems: 'center', fontSize: 12, color: '#111827', fontWeight: 600 }}>
                       Opal
                     </div>
-                    <div style={{ padding: 10, flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+                    <div style={{ padding: 10, flex: 1, display: 'flex', flexDirection: 'column' }}>
                       <div style={{ background: '#007aff', borderRadius: '14px 14px 5px 14px', padding: '9px 10px', marginBottom: 8, color: '#ffffff', fontSize: 14, lineHeight: 1.35, marginLeft: '10%', maxWidth: '90%' }}>
                         guess what? i’ve hit my saving goal for the jeep wrangler🙈
                       </div>
