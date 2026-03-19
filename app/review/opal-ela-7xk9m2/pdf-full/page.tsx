@@ -6,114 +6,81 @@ export const metadata = {
   robots: { index: false, follow: false }
 };
 
-type Section = {
+type Level = {
   title: string;
+  subtitle: string;
+  goal: string;
   why: string;
   steps: string[];
-  check: string[];
-  mistakes?: string[];
+  done: string[];
+  panic?: string;
 };
 
-const sections: Section[] = [
+const levels: Level[] = [
   {
-    title: '1) Before you begin: what this guide is for',
-    why: 'You are not trying to become an engineer. You are setting up one reliable assistant that runs safely and helps you every day.',
+    title: 'Level 1 — It replies to you',
+    subtitle: 'Give your AI a home + first response',
+    goal: 'Send one message in Telegram and get one response back.',
+    why: 'This is your first real win. Don’t optimize yet — just prove the loop works.',
     steps: [
-      'Goal for today: your assistant can respond in Telegram and remember project context.',
-      'You only need: laptop, one VPS, Telegram, and an API key for a model.',
-      'Time estimate: 60–90 minutes for first setup.'
+      'Create a small Ubuntu VPS.',
+      'Generate an SSH key and attach it to your VPS provider.',
+      'Install OpenClaw and run onboarding in terminal.',
+      'Pair Telegram and send “hi”.'
     ],
-    check: ['You understand the goal: useful + safe > fancy.', 'You are ready to move one step at a time.']
+    done: ['You sent a message.', 'It replied.', 'You officially have your own AI assistant 🎉'],
+    panic: 'If this feels technical, that’s normal. You only need to follow the sequence, not understand every command.'
   },
   {
-    title: '2) Secure foundation (SSH + private network)',
-    why: 'If security is weak, everything after this is fragile. This is the non-negotiable base.',
+    title: 'Level 2 — It stays private and stable',
+    subtitle: 'Security without overcomplication',
+    goal: 'Use private access (SSH + Tailscale) so your setup is safer and less fragile.',
+    why: 'If you skip this, things can break randomly or be exposed in ways you don’t want.',
     steps: [
-      'Create a VPS with Ubuntu 22.04/24.04.',
-      'Create an SSH key on your laptop and add the public key to the VPS provider.',
-      'Install Tailscale on laptop + server so SSH happens over a private network.',
-      'Log in using private address (not open public password auth).'
+      'Install Tailscale on your laptop + server.',
+      'Connect both to the same tailnet.',
+      'SSH over private network instead of weak/public defaults.',
+      'Run health checks: openclaw status + gateway status.'
     ],
-    check: [
-      'You can SSH into server without password prompts every time.',
-      'You can see both devices connected in Tailscale.',
-      'Server is reachable privately before OpenClaw setup.'
-    ],
-    mistakes: ['Skipping private networking.', 'Using weak/default auth.', 'Moving to app setup before SSH is stable.']
+    done: ['Private connectivity works.', 'Gateway is healthy.', 'You can reconnect reliably after restart.']
   },
   {
-    title: '3) Install OpenClaw and verify health',
-    why: 'Install is easy. Verification is what saves hours later.',
+    title: 'Level 3 — It remembers things',
+    subtitle: 'Simple memory, not perfection',
+    goal: 'Stop the “why did my AI forget?” problem.',
+    why: 'AI feels smart but forgets quickly unless you give it structure.',
     steps: [
-      'Install Node.js 22+ on server.',
-      'Install OpenClaw and run onboarding.',
-      'Connect Telegram during onboarding and approve pairing.',
-      'Run health checks after onboarding.'
+      'Keep one daily note file with what changed today.',
+      'Track Top 3 priorities + blockers in separate files.',
+      'Run nightly memory maintenance to keep it fresh.',
+      'Write rules when mistakes happen so they don’t repeat.'
     ],
-    check: ['openclaw --version works', 'openclaw status shows healthy', 'openclaw gateway status shows running', 'You received first Telegram response'],
-    mistakes: ['Not checking gateway status after onboarding.', 'Pairing in wrong chat/topic.']
+    done: ['Decisions are recoverable.', 'Blockers are visible.', 'Repeated errors drop over time.'],
+    panic: 'Don’t build a perfect memory system on day one. Simple and consistent beats fancy and abandoned.'
   },
   {
-    title: '4) Telegram setup for multiple projects',
-    why: 'Without topic structure, context gets messy and outputs degrade fast.',
+    title: 'Level 4 — It starts helping your real life',
+    subtitle: 'Inbox, projects, routines',
+    goal: 'Move from “cool demo” to actual leverage.',
+    why: 'The point is less mental load and more execution, not just chatting.',
     steps: [
-      'Create one Telegram group for your assistant workflows.',
-      'Use separate topics: Build, Marketing, Ops, Personal, Payments.',
-      'Keep each topic single-purpose. Don’t mix project requests in one thread.',
-      'Ask for daily topic summaries if context gets long.'
+      'Set up Telegram topics: Build, Marketing, Ops, Personal, Payments.',
+      'Connect Gmail in safe mode (read + draft + archive, no auto-send).',
+      'Run a morning brief: priorities + blockers.',
+      'Run nightly review: memory + SOP updates.'
     ],
-    check: ['Each topic has a clear function.', 'Assistant can stay focused per topic.'],
-    mistakes: ['Running unrelated tasks in one thread.', 'No naming convention for topics.']
-  },
-  {
-    title: '5) Memory system that actually works',
-    why: 'Agents seem smart but forget unless memory is structured and maintained.',
-    steps: [
-      'Keep daily memory logs (what changed today).',
-      'Maintain a long-term memory file for durable facts and operating rules.',
-      'Track priorities + blockers separately so execution stays clear.',
-      'Run a nightly maintenance pass to update memory and SOPs.'
-    ],
-    check: ['Important decisions are recoverable next day.', 'Blockers are visible with owners.', 'Repeated tasks have written SOPs.'],
-    mistakes: ['Relying on chat history alone.', 'No nightly update routine.']
-  },
-  {
-    title: '6) Gmail integration in safe mode',
-    why: 'Email automation is high leverage, but must keep human control for sends.',
-    steps: [
-      'Grant read + draft + label/archive permissions first.',
-      'Keep send permission off by default.',
-      'Use workflow: summarize inbox → draft replies → human approves send.',
-      'Add morning triage and end-of-day cleanup routines.'
-    ],
-    check: ['Inbox gets summarized with priority order.', 'Drafts are ready for approval.', 'No unsupervised sending.'],
-    mistakes: ['Auto-send too early.', 'No clear approval rule.']
-  },
-  {
-    title: '7) How to recover from mistakes (critical)',
-    why: 'The difference between chaos and scale is whether mistakes become system upgrades.',
-    steps: [
-      'After any failure, write what happened + root cause in memory.',
-      'Add a permanent rule/SOP update to prevent recurrence.',
-      'Use blocker language: ask only for access/approval that unlocks execution.'
-    ],
-    check: ['You can point to the exact SOP/rule created after each failure.', 'Repeated mistakes decrease over time.']
+    done: ['You get useful daily guidance.', 'Drafts are ready for approval.', 'Context is separated by topic.']
   }
 ];
 
-const dailyRitual = [
-  'Morning (5 min): ask for Top 3 priorities and today’s blockers.',
-  'Midday (2 min): check if priorities changed.',
-  'Nightly (automated): update memory + priorities + SOPs.'
-];
-
-const screenshotChecklist = [
-  'VPS create screen',
-  'SSH key generation',
-  'Tailscale machine list',
-  'OpenClaw onboarding in terminal',
+const imageList = [
+  'VPS creation screen',
+  'SSH key generation terminal output',
+  'Tailscale dashboard with connected machines',
+  'OpenClaw onboarding terminal',
   'Telegram pairing approval',
-  'Topic structure in Telegram',
+  'First Telegram response screenshot',
+  'Telegram topic structure',
   'Memory before/after example',
   'Gmail draft review flow'
 ];
@@ -121,79 +88,81 @@ const screenshotChecklist = [
 export default function PdfFullDraftPage() {
   return (
     <main style={{ minHeight: '100vh', background: '#f7f4ed', color: '#1f1d1a', padding: '42px 20px 80px' }}>
-      <div style={{ maxWidth: 920, margin: '0 auto' }}>
-        <p style={{ margin: 0, textTransform: 'uppercase', letterSpacing: 1.2, fontSize: 12, color: '#7a7268' }}>Private PDF draft — full beginner version v2</p>
+      <div style={{ maxWidth: 940, margin: '0 auto' }}>
+        <p style={{ margin: 0, textTransform: 'uppercase', letterSpacing: 1.2, fontSize: 12, color: '#7a7268' }}>Private PDF draft — beginner rewrite v3</p>
 
-        <h1 className={editorial.className} style={{ margin: '10px 0 8px', fontSize: 'clamp(34px, 6vw, 64px)', color: '#6b2e1e', fontWeight: 500 }}>
-          Set Up Your AI Agent (Beginner-Friendly)
+        <h1 className={editorial.className} style={{ margin: '10px 0 8px', fontSize: 'clamp(36px, 6vw, 68px)', color: '#6b2e1e', fontWeight: 500 }}>
+          Build Your Own AI Assistant
         </h1>
 
-        <p style={{ marginTop: 0, fontSize: 18, color: '#4c453f', lineHeight: 1.55 }}>
-          This version is written for non-technical builders. It gives you practical setup steps, what to check after each step, and what mistakes to avoid.
+        <p style={{ marginTop: 0, fontSize: 21, color: '#4c453f', lineHeight: 1.5 }}>
+          No coding required. No “tech bro” energy required.
         </p>
 
-        <section style={{ marginTop: 20, background: '#fff', border: '1px solid #e9dece', borderRadius: 14, padding: 16 }}>
-          <h2 className={editorial.className} style={{ margin: '0 0 8px', color: '#6b2e1e', fontSize: 32, fontWeight: 600 }}>What you’ll have by the end</h2>
+        <section style={{ marginTop: 18, background: '#fff', border: '1px solid #e9dece', borderRadius: 14, padding: 18 }}>
+          <p style={{ margin: '0 0 10px', color: '#4d453f', lineHeight: 1.6 }}>
+            We sat through too many OpenClaw tutorials, tested the setups that broke, and kept only what actually works.
+            This is the version we wish existed at the start.
+          </p>
+          <p style={{ margin: '0 0 10px', color: '#4d453f', lineHeight: 1.6 }}>
+            <strong>Goal:</strong> in about 60 minutes, your AI replies to you in Telegram.
+            Then we level it up so it remembers and helps with real tasks.
+          </p>
+          <h2 className={editorial.className} style={{ margin: '8px 0 8px', color: '#6b2e1e', fontSize: 34, fontWeight: 600 }}>What you’ll have in ~60 minutes</h2>
           <ul style={{ margin: 0, paddingLeft: 22, color: '#4d453f', lineHeight: 1.6 }}>
-            <li>A secure OpenClaw assistant running on your server</li>
-            <li>Telegram topics for separate projects and cleaner context</li>
-            <li>A memory system that retains decisions and blockers</li>
-            <li>Safe Gmail triage with human approval on sends</li>
-            <li>A repeatable daily/weekly routine to keep quality high</li>
+            <li>An AI you can text like a person</li>
+            <li>A private setup that won’t collapse every week</li>
+            <li>A simple memory structure so it stops forgetting everything</li>
           </ul>
         </section>
 
         <section style={{ marginTop: 18, display: 'grid', gap: 12 }}>
-          {sections.map((s) => (
-            <article key={s.title} style={{ background: '#fff', border: '1px solid #e9dece', borderRadius: 14, padding: 16 }}>
-              <h2 className={editorial.className} style={{ margin: '0 0 8px', color: '#6b2e1e', fontSize: 32, fontWeight: 600 }}>{s.title}</h2>
+          {levels.map((level) => (
+            <article key={level.title} style={{ background: '#fff', border: '1px solid #e9dece', borderRadius: 14, padding: 16 }}>
+              <h2 className={editorial.className} style={{ margin: '0 0 4px', color: '#6b2e1e', fontSize: 34, fontWeight: 600 }}>{level.title}</h2>
+              <p style={{ margin: '0 0 10px', color: '#7a5a4d', fontSize: 15 }}>{level.subtitle}</p>
 
-              <p style={{ margin: '0 0 10px', color: '#5a5048', lineHeight: 1.55 }}><strong>Why this matters:</strong> {s.why}</p>
+              <p style={{ margin: '0 0 8px', color: '#4d453f', lineHeight: 1.6 }}><strong>Goal:</strong> {level.goal}</p>
+              <p style={{ margin: '0 0 8px', color: '#4d453f', lineHeight: 1.6 }}><strong>Why this matters:</strong> {level.why}</p>
 
-              <p style={{ margin: '0 0 6px', color: '#5a5048' }}><strong>Steps:</strong></p>
-              <ol style={{ margin: '0 0 10px', paddingLeft: 22, color: '#4d453f', lineHeight: 1.6 }}>
-                {s.steps.map((step) => (
+              <p style={{ margin: '0 0 6px', color: '#5a5048' }}><strong>Do this:</strong></p>
+              <ol style={{ margin: '0 0 10px', paddingLeft: 22, color: '#4d453f', lineHeight: 1.65 }}>
+                {level.steps.map((step) => (
                   <li key={step}>{step}</li>
                 ))}
               </ol>
 
-              <p style={{ margin: '0 0 6px', color: '#5a5048' }}><strong>Done means:</strong></p>
-              <ul style={{ margin: '0 0 0', paddingLeft: 22, color: '#4d453f', lineHeight: 1.6 }}>
-                {s.check.map((c) => (
-                  <li key={c}>{c}</li>
+              <p style={{ margin: '0 0 6px', color: '#5a5048' }}><strong>You did it if:</strong></p>
+              <ul style={{ margin: 0, paddingLeft: 22, color: '#4d453f', lineHeight: 1.65 }}>
+                {level.done.map((d) => (
+                  <li key={d}>{d}</li>
                 ))}
               </ul>
 
-              {s.mistakes && (
-                <>
-                  <p style={{ margin: '10px 0 6px', color: '#8a3d30' }}><strong>Avoid these mistakes:</strong></p>
-                  <ul style={{ margin: 0, paddingLeft: 22, color: '#6b3f35', lineHeight: 1.6 }}>
-                    {s.mistakes.map((m) => (
-                      <li key={m}>{m}</li>
-                    ))}
-                  </ul>
-                </>
+              {level.panic && (
+                <div style={{ marginTop: 10, background: '#fff8ef', border: '1px solid #efd8b8', borderRadius: 10, padding: '10px 12px', color: '#6b4a3a' }}>
+                  <strong>⚠️ Don’t panic:</strong> {level.panic}
+                </div>
               )}
             </article>
           ))}
         </section>
 
         <section style={{ marginTop: 18, background: '#fff', border: '1px solid #e9dece', borderRadius: 14, padding: 16 }}>
-          <h2 className={editorial.className} style={{ margin: '0 0 8px', color: '#6b2e1e', fontSize: 32, fontWeight: 600 }}>Your simple operating rhythm</h2>
-          <ul style={{ margin: 0, paddingLeft: 22, color: '#4d453f', lineHeight: 1.6 }}>
-            {dailyRitual.map((r) => (
-              <li key={r}>{r}</li>
+          <h2 className={editorial.className} style={{ margin: '0 0 8px', color: '#6b2e1e', fontSize: 34, fontWeight: 600 }}>Images to include in the designed PDF</h2>
+          <ul style={{ margin: 0, paddingLeft: 22, color: '#4d453f', lineHeight: 1.65 }}>
+            {imageList.map((img) => (
+              <li key={img}>{img}</li>
             ))}
           </ul>
         </section>
 
         <section style={{ marginTop: 18, background: '#fff', border: '1px solid #e9dece', borderRadius: 14, padding: 16 }}>
-          <h2 className={editorial.className} style={{ margin: '0 0 8px', color: '#6b2e1e', fontSize: 32, fontWeight: 600 }}>Screenshot checklist (for visual version)</h2>
-          <ul style={{ margin: 0, paddingLeft: 22, color: '#4d453f', lineHeight: 1.6 }}>
-            {screenshotChecklist.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+          <h2 className={editorial.className} style={{ margin: '0 0 8px', color: '#6b2e1e', fontSize: 34, fontWeight: 600 }}>You’re not done — you’re started</h2>
+          <p style={{ margin: 0, color: '#4d453f', lineHeight: 1.65 }}>
+            Right now your AI can reply, remember a little, and help with core tasks. From here, you can train it for inbox, planning, travel, research, and business workflows.
+            That’s the real upside: less overwhelm, more execution.
+          </p>
         </section>
       </div>
     </main>
