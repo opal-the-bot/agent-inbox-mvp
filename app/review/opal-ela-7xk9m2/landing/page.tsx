@@ -121,9 +121,7 @@ export default function PrivateDraftLandingPage() {
         <section style={{ marginBottom: 52 }}>
           <div style={{ background: '#fffaf3', border: '1px solid #e9dece', borderRadius: 20, padding: '22px 20px' }}>
             <p className={editorial.className} style={{ margin: '0 0 14px', fontSize: 34, color: '#6b2e1e', lineHeight: 1.08 }}>
-              No terminal, no apps, no complicated platforms.
-              <br />
-              <span style={{ display: 'inline-block', marginTop: 14, fontSize: 30 }}>Choose a personality, send tasks, and communicate through:</span>
+              <span style={{ display: 'inline-block', marginTop: 0, fontSize: 30 }}>Customize a personality, send tasks, and communicate through:</span>
             </p>
 
             <div style={{ display: 'grid', gap: 14, gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
