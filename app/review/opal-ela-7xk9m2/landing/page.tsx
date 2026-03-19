@@ -1,4 +1,5 @@
 import { Cormorant_Garamond } from 'next/font/google';
+import EmbeddedCheckoutCard from './EmbeddedCheckoutCard';
 
 const editorial = Cormorant_Garamond({ subsets: ['latin'], weight: ['500', '600', '700'] });
 
@@ -79,8 +80,6 @@ function ScrollingCapabilities() {
 }
 
 export default function PrivateDraftLandingPage() {
-  const paymentLink = process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK;
-
   return (
     <main style={{ minHeight: '100vh', background: '#f4f0e8', color: '#2a211d', padding: '42px 20px 90px' }}>
       <style>{`@keyframes scrollLeft {0% { transform: translateX(0); } 100% { transform: translateX(-50%); }}`}</style>
@@ -242,22 +241,7 @@ export default function PrivateDraftLandingPage() {
 
               <div style={{ minWidth: 190, display: 'grid', gap: 10, justifyItems: 'start' }}>
                 <strong style={{ fontSize: 36, color: '#5a2e21', lineHeight: 1 }}>$10</strong>
-                {paymentLink ? (
-                  <a
-                    href={paymentLink}
-                    style={{ border: 0, borderRadius: 999, padding: '12px 18px', background: '#b76e79', color: '#fff', fontWeight: 700, cursor: 'pointer', fontSize: 15, textDecoration: 'none' }}
-                  >
-                    Add to Cart
-                  </a>
-                ) : (
-                  <button
-                    disabled
-                    title="Missing NEXT_PUBLIC_STRIPE_PAYMENT_LINK"
-                    style={{ border: 0, borderRadius: 999, padding: '12px 18px', background: '#d4b5bb', color: '#fff', fontWeight: 700, cursor: 'not-allowed', fontSize: 15 }}
-                  >
-                    Add to Cart
-                  </button>
-                )}
+                <EmbeddedCheckoutCard />
                 <p style={{ margin: 0, fontSize: 13, color: '#8c8178' }}>Instant PDF Delivery</p>
               </div>
             </div>
