@@ -1,5 +1,7 @@
+import { Suspense } from 'react';
 import { Cormorant_Garamond } from 'next/font/google';
 import EmbeddedCheckoutCard from '../review/opal-ela-7xk9m2/landing/EmbeddedCheckoutCard';
+import PurchaseSuccessCard from './PurchaseSuccessCard';
 
 const editorial = Cormorant_Garamond({ subsets: ['latin'], weight: ['500', '600', '700'] });
 
@@ -81,6 +83,10 @@ export default function OpalLandingPage() {
       <style>{`@keyframes scrollLeft {0% { transform: translateX(0); } 100% { transform: translateX(-50%); }}`}</style>
 
       <div style={{ maxWidth: 980, margin: '0 auto' }}>
+        <Suspense fallback={null}>
+          <PurchaseSuccessCard />
+        </Suspense>
+
         <header style={{ marginBottom: 44 }}>
           <p style={{ margin: 0, letterSpacing: 1.4, textTransform: 'uppercase', fontSize: 12, color: '#8a786c' }}>Private Review Draft v8</p>
           <div style={{ marginTop: 10 }}>
