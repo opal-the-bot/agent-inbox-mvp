@@ -1,5 +1,5 @@
-import { redirect } from 'next/navigation';
+import OpalLandingPage from './components/OpalLandingPage';
 
 export default function HomePage() {
-  redirect('/review/opal-ela-7xk9m2/landing');
+  return <OpalLandingPage />;
 }
