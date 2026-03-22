@@ -1,12 +1,22 @@
 export const metadata = {
   metadataBase: new URL('https://use-opal.com'),
-  title: 'Agent Inbox MVP',
-  description: 'Coordinate AI agents and human approvals in one place.',
+  title: 'Opal AI — Build Your Own AI Assistant',
+  description:
+    'A beginner-friendly guide to set up your own AI assistant with OpenClaw — no coding required. Own your agent and run it for about $7/month.',
   alternates: {
     canonical: '/'
   },
   openGraph: {
+    title: 'Opal AI — Build Your Own AI Assistant',
+    description:
+      'A beginner-friendly guide to set up your own AI assistant with OpenClaw — no coding required. Own your agent and run it for about $7/month.',
     url: 'https://use-opal.com'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Opal AI — Build Your Own AI Assistant',
+    description:
+      'A beginner-friendly guide to set up your own AI assistant with OpenClaw — no coding required.'
   }
 };
 
