@@ -3,7 +3,7 @@ import Stripe from 'stripe';
 
 export const dynamic = 'force-dynamic';
 
-export async function POST(request: Request) {
+export async function POST() {
   const secretKey = process.env.STRIPE_SECRET_KEY;
 
   if (!secretKey) {
@@ -15,9 +15,9 @@ export async function POST(request: Request) {
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://use-opal.com';
 
     const session = await stripe.checkout.sessions.create({
-      ui_mode: 'embedded',
       mode: 'payment',
-      return_url: `${siteUrl}/review/opal-ela-7xk9m2/landing?checkout=success&session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `${siteUrl}/?checkout=success&session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${siteUrl}/?checkout=cancelled`,
       line_items: [
         {
           quantity: 1,
@@ -37,13 +37,13 @@ export async function POST(request: Request) {
       }
     });
 
-    if (!session.client_secret) {
-      return NextResponse.json({ error: 'Stripe did not return client secret' }, { status: 500 });
+    if (!session.url) {
+      return NextResponse.json({ error: 'Stripe did not return checkout URL' }, { status: 500 });
     }
 
-    return NextResponse.json({ clientSecret: session.client_secret });
+    return NextResponse.json({ url: session.url });
   } catch (error) {
-    const message = error instanceof Error ? error.message : 'Unable to create embedded checkout session';
+    const message = error instanceof Error ? error.message : 'Unable to create checkout session';
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }

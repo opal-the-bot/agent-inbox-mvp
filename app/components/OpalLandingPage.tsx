@@ -219,11 +219,11 @@ export default function OpalLandingPage() {
 
         <section style={{ marginBottom: 18 }}>
           <article style={{ background: '#fff', border: '1px solid #eadfd1', borderRadius: 20, padding: 24, boxShadow: '0 8px 24px rgba(77,46,34,0.04)' }}>
-            <div style={{ borderRadius: 14, background: 'linear-gradient(135deg, #f7e2d2 0%, #efe8d5 46%, #ead9df 100%)', height: 180, marginBottom: 18, display: 'grid', placeItems: 'center', color: '#6b2e1e', textAlign: 'center', padding: 16 }}>
-              <div>
-                <div style={{ fontSize: 12, letterSpacing: 1, textTransform: 'uppercase', opacity: 0.75 }}>Now included</div>
-                <div className={editorial.className} style={{ fontSize: 36, lineHeight: 1.05, marginTop: 6 }}>Opal AI Starter Guide</div>
-                <div style={{ fontSize: 14, marginTop: 6, color: '#7a4a3a' }}>Instant PDF delivery after checkout</div>
+            <div style={{ borderRadius: 14, background: 'linear-gradient(135deg, #f7e2d2 0%, #efe8d5 46%, #ead9df 100%)', marginBottom: 18, padding: 14 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 10 }}>
+                {['/product-preview/preview-1.jpg', '/product-preview/preview-2.jpg', '/product-preview/preview-3.jpg', '/product-preview/preview-4.jpg'].map((src) => (
+                  <img key={src} src={src} alt='Opal AI Starter Guide preview page' style={{ width: '100%', height: 170, objectFit: 'cover', borderRadius: 10, border: '1px solid #e7d8c7', boxShadow: '0 6px 14px rgba(77,46,34,0.08)' }} />
+                ))}
               </div>
             </div>
 
