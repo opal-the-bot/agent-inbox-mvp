@@ -1,12 +1,35 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { EmbeddedCheckout, EmbeddedCheckoutProvider } from '@stripe/react-stripe-js';
 
 export default function EmbeddedCheckoutCard() {
   const [open, setOpen] = useState(false);
-  const publishableKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
+  const [publishableKey, setPublishableKey] = useState<string | null>(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || null);
+  const [keyError, setKeyError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (publishableKey) return;
+
+    let cancelled = false;
+    fetch('/api/stripe/publishable-key')
+      .then(async (res) => {
+        const json = await res.json();
+        if (!res.ok) throw new Error(json?.error || 'Missing Stripe key');
+        return json.publishableKey as string;
+      })
+      .then((key) => {
+        if (!cancelled) setPublishableKey(key);
+      })
+      .catch((err: Error) => {
+        if (!cancelled) setKeyError(err.message);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [publishableKey]);
 
   const stripePromise = useMemo(() => {
     if (!publishableKey) return null;
@@ -30,7 +53,7 @@ export default function EmbeddedCheckoutCard() {
   if (!publishableKey) {
     return (
       <div style={{ color: '#8c8178', fontSize: 13 }}>
-        Checkout not configured yet (missing <code>NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY</code>).
+        {keyError ? `Checkout unavailable: ${keyError}` : 'Loading checkout...'}
       </div>
     );
   }
