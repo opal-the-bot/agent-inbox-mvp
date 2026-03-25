@@ -23,7 +23,7 @@ export async function POST() {
           quantity: 1,
           price_data: {
             currency: 'usd',
-            unit_amount: 1500,
+            unit_amount: 1000,
             product_data: {
               name: 'Opal AI Starter PDF',
               description: 'Instant PDF Delivery'

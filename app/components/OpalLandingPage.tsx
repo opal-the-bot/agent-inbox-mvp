@@ -246,7 +246,7 @@ export default function OpalLandingPage() {
               </div>
 
               <div style={{ minWidth: 190, display: 'grid', gap: 10, justifyItems: 'start' }}>
-                <strong style={{ fontSize: 36, color: '#5a2e21', lineHeight: 1 }}>$15</strong>
+                <strong style={{ fontSize: 36, color: '#5a2e21', lineHeight: 1 }}>$10</strong>
                 <EmbeddedCheckoutCard />
                 <p style={{ margin: 0, fontSize: 13, color: '#8c8178' }}>Instant PDF Delivery</p>
               </div>
