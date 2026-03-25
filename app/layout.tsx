@@ -13,7 +13,7 @@ export const metadata = {
     url: 'https://use-opal.com',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image-v2.jpg',
         width: 1200,
         height: 630,
         alt: 'Opal AI Starter Guide'
@@ -25,7 +25,7 @@ export const metadata = {
     title: 'Opal AI — Build Your Own AI Assistant',
     description:
       'A beginner-friendly guide to set up your own AI assistant with OpenClaw — no coding required.',
-    images: ['/og-image.jpg']
+    images: ['/og-image-v2.jpg']
   }
 };
 
