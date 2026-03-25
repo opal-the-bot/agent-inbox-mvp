@@ -88,12 +88,11 @@ export default function OpalLandingPage() {
         </Suspense>
 
         <header style={{ marginBottom: 44 }}>
-          <p style={{ margin: 0, letterSpacing: 1.4, textTransform: 'uppercase', fontSize: 12, color: '#8a786c' }}>Private Review Draft v8</p>
           <div style={{ marginTop: 10 }}>
             <LogoSelectedC />
           </div>
           <p style={{ margin: '10px 0 0', color: teachColor, fontSize: 17, lineHeight: 1.45, maxWidth: 900 }}>
-            Give them a fish, feed them for a day. Teach them to fish, feed them for a lifetime.
+            Stop doing what drains you. Build an AI that will.
           </p>
         </header>
 
